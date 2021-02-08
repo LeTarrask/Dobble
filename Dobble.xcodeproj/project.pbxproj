@@ -1,0 +1,633 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		79FA5B6125D166380057FC51 /* DobbleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FA5B6025D166380057FC51 /* DobbleApp.swift */; };
+		79FA5B6325D166380057FC51 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FA5B6225D166380057FC51 /* ContentView.swift */; };
+		79FA5B6525D1663E0057FC51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79FA5B6425D1663E0057FC51 /* Assets.xcassets */; };
+		79FA5B6825D1663E0057FC51 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79FA5B6725D1663E0057FC51 /* Preview Assets.xcassets */; };
+		79FA5B7325D1663E0057FC51 /* DobbleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FA5B7225D1663E0057FC51 /* DobbleTests.swift */; };
+		79FA5B7E25D1663E0057FC51 /* DobbleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FA5B7D25D1663E0057FC51 /* DobbleUITests.swift */; };
+		79FA5B9625D169900057FC51 /* CardGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FA5B9125D166A00057FC51 /* CardGenerator.swift */; };
+		79FA5B9E25D1729A0057FC51 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FA5B9D25D1729A0057FC51 /* Card.swift */; };
+		79FA5BA525D17A4E0057FC51 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FA5B9D25D1729A0057FC51 /* Card.swift */; };
+		79FA5BAA25D17DC70057FC51 /* extension+Array+similarElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FA5BA925D17DC70057FC51 /* extension+Array+similarElements.swift */; };
+		79FA5BB225D190B30057FC51 /* Decks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FA5BB125D190B30057FC51 /* Decks.swift */; };
+		79FA5BB725D1923C0057FC51 /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FA5BB625D1923C0057FC51 /* GameController.swift */; };
+		79FA5BB825D1923C0057FC51 /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FA5BB625D1923C0057FC51 /* GameController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		79FA5B6F25D1663E0057FC51 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 79FA5B5525D166380057FC51 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 79FA5B5C25D166380057FC51;
+			remoteInfo = Dobble;
+		};
+		79FA5B7A25D1663E0057FC51 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 79FA5B5525D166380057FC51 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 79FA5B5C25D166380057FC51;
+			remoteInfo = Dobble;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		79FA5B5D25D166380057FC51 /* Dobble.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dobble.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		79FA5B6025D166380057FC51 /* DobbleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DobbleApp.swift; sourceTree = "<group>"; };
+		79FA5B6225D166380057FC51 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		79FA5B6425D1663E0057FC51 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		79FA5B6725D1663E0057FC51 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		79FA5B6925D1663E0057FC51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		79FA5B6E25D1663E0057FC51 /* DobbleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DobbleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		79FA5B7225D1663E0057FC51 /* DobbleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DobbleTests.swift; sourceTree = "<group>"; };
+		79FA5B7425D1663E0057FC51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		79FA5B7925D1663E0057FC51 /* DobbleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DobbleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		79FA5B7D25D1663E0057FC51 /* DobbleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DobbleUITests.swift; sourceTree = "<group>"; };
+		79FA5B7F25D1663E0057FC51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		79FA5B9125D166A00057FC51 /* CardGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardGenerator.swift; sourceTree = "<group>"; };
+		79FA5B9D25D1729A0057FC51 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		79FA5BA925D17DC70057FC51 /* extension+Array+similarElements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "extension+Array+similarElements.swift"; path = "Dobble/ViewModels/extension+Array+similarElements.swift"; sourceTree = SOURCE_ROOT; };
+		79FA5BB125D190B30057FC51 /* Decks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Decks.swift; sourceTree = "<group>"; };
+		79FA5BB625D1923C0057FC51 /* GameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GameController.swift; path = Dobble/ViewModels/GameController.swift; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		79FA5B5A25D166380057FC51 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		79FA5B6B25D1663E0057FC51 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		79FA5B7625D1663E0057FC51 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		79FA5B5425D166380057FC51 = {
+			isa = PBXGroup;
+			children = (
+				79FA5B5F25D166380057FC51 /* Dobble */,
+				79FA5B7125D1663E0057FC51 /* DobbleTests */,
+				79FA5B7C25D1663E0057FC51 /* DobbleUITests */,
+				79FA5B5E25D166380057FC51 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		79FA5B5E25D166380057FC51 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				79FA5B5D25D166380057FC51 /* Dobble.app */,
+				79FA5B6E25D1663E0057FC51 /* DobbleTests.xctest */,
+				79FA5B7925D1663E0057FC51 /* DobbleUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		79FA5B5F25D166380057FC51 /* Dobble */ = {
+			isa = PBXGroup;
+			children = (
+				79FA5B6025D166380057FC51 /* DobbleApp.swift */,
+				79FA5B6925D1663E0057FC51 /* Info.plist */,
+				79FA5B8E25D1664B0057FC51 /* Model */,
+				79FA5B9025D166610057FC51 /* ViewModels */,
+				79FA5B8F25D166520057FC51 /* Views */,
+				79FA5B6425D1663E0057FC51 /* Assets.xcassets */,
+				79FA5B6625D1663E0057FC51 /* Preview Content */,
+			);
+			path = Dobble;
+			sourceTree = "<group>";
+		};
+		79FA5B6625D1663E0057FC51 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				79FA5B6725D1663E0057FC51 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		79FA5B7125D1663E0057FC51 /* DobbleTests */ = {
+			isa = PBXGroup;
+			children = (
+				79FA5B7225D1663E0057FC51 /* DobbleTests.swift */,
+				79FA5B7425D1663E0057FC51 /* Info.plist */,
+			);
+			path = DobbleTests;
+			sourceTree = "<group>";
+		};
+		79FA5B7C25D1663E0057FC51 /* DobbleUITests */ = {
+			isa = PBXGroup;
+			children = (
+				79FA5B7D25D1663E0057FC51 /* DobbleUITests.swift */,
+				79FA5B7F25D1663E0057FC51 /* Info.plist */,
+			);
+			path = DobbleUITests;
+			sourceTree = "<group>";
+		};
+		79FA5B8E25D1664B0057FC51 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				79FA5B9D25D1729A0057FC51 /* Card.swift */,
+				79FA5BB125D190B30057FC51 /* Decks.swift */,
+				79FA5BA925D17DC70057FC51 /* extension+Array+similarElements.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		79FA5B8F25D166520057FC51 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				79FA5B6225D166380057FC51 /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		79FA5B9025D166610057FC51 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				79FA5BB625D1923C0057FC51 /* GameController.swift */,
+				79FA5B9125D166A00057FC51 /* CardGenerator.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		79FA5B5C25D166380057FC51 /* Dobble */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 79FA5B8225D1663E0057FC51 /* Build configuration list for PBXNativeTarget "Dobble" */;
+			buildPhases = (
+				79FA5B5925D166380057FC51 /* Sources */,
+				79FA5B5A25D166380057FC51 /* Frameworks */,
+				79FA5B5B25D166380057FC51 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Dobble;
+			productName = Dobble;
+			productReference = 79FA5B5D25D166380057FC51 /* Dobble.app */;
+			productType = "com.apple.product-type.application";
+		};
+		79FA5B6D25D1663E0057FC51 /* DobbleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 79FA5B8525D1663E0057FC51 /* Build configuration list for PBXNativeTarget "DobbleTests" */;
+			buildPhases = (
+				79FA5B6A25D1663E0057FC51 /* Sources */,
+				79FA5B6B25D1663E0057FC51 /* Frameworks */,
+				79FA5B6C25D1663E0057FC51 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				79FA5B7025D1663E0057FC51 /* PBXTargetDependency */,
+			);
+			name = DobbleTests;
+			productName = DobbleTests;
+			productReference = 79FA5B6E25D1663E0057FC51 /* DobbleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		79FA5B7825D1663E0057FC51 /* DobbleUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 79FA5B8825D1663E0057FC51 /* Build configuration list for PBXNativeTarget "DobbleUITests" */;
+			buildPhases = (
+				79FA5B7525D1663E0057FC51 /* Sources */,
+				79FA5B7625D1663E0057FC51 /* Frameworks */,
+				79FA5B7725D1663E0057FC51 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				79FA5B7B25D1663E0057FC51 /* PBXTargetDependency */,
+			);
+			name = DobbleUITests;
+			productName = DobbleUITests;
+			productReference = 79FA5B7925D1663E0057FC51 /* DobbleUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		79FA5B5525D166380057FC51 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					79FA5B5C25D166380057FC51 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					79FA5B6D25D1663E0057FC51 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 79FA5B5C25D166380057FC51;
+					};
+					79FA5B7825D1663E0057FC51 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 79FA5B5C25D166380057FC51;
+					};
+				};
+			};
+			buildConfigurationList = 79FA5B5825D166380057FC51 /* Build configuration list for PBXProject "Dobble" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 79FA5B5425D166380057FC51;
+			productRefGroup = 79FA5B5E25D166380057FC51 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				79FA5B5C25D166380057FC51 /* Dobble */,
+				79FA5B6D25D1663E0057FC51 /* DobbleTests */,
+				79FA5B7825D1663E0057FC51 /* DobbleUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		79FA5B5B25D166380057FC51 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				79FA5B6825D1663E0057FC51 /* Preview Assets.xcassets in Resources */,
+				79FA5B6525D1663E0057FC51 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		79FA5B6C25D1663E0057FC51 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		79FA5B7725D1663E0057FC51 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		79FA5B5925D166380057FC51 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				79FA5BB225D190B30057FC51 /* Decks.swift in Sources */,
+				79FA5BAA25D17DC70057FC51 /* extension+Array+similarElements.swift in Sources */,
+				79FA5B6325D166380057FC51 /* ContentView.swift in Sources */,
+				79FA5B6125D166380057FC51 /* DobbleApp.swift in Sources */,
+				79FA5BB725D1923C0057FC51 /* GameController.swift in Sources */,
+				79FA5B9E25D1729A0057FC51 /* Card.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		79FA5B6A25D1663E0057FC51 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				79FA5B7325D1663E0057FC51 /* DobbleTests.swift in Sources */,
+				79FA5BB825D1923C0057FC51 /* GameController.swift in Sources */,
+				79FA5BA525D17A4E0057FC51 /* Card.swift in Sources */,
+				79FA5B9625D169900057FC51 /* CardGenerator.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		79FA5B7525D1663E0057FC51 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				79FA5B7E25D1663E0057FC51 /* DobbleUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		79FA5B7025D1663E0057FC51 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 79FA5B5C25D166380057FC51 /* Dobble */;
+			targetProxy = 79FA5B6F25D1663E0057FC51 /* PBXContainerItemProxy */;
+		};
+		79FA5B7B25D1663E0057FC51 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 79FA5B5C25D166380057FC51 /* Dobble */;
+			targetProxy = 79FA5B7A25D1663E0057FC51 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		79FA5B8025D1663E0057FC51 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		79FA5B8125D1663E0057FC51 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		79FA5B8325D1663E0057FC51 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Dobble/Preview Content\"";
+				DEVELOPMENT_TEAM = L2BC5TCSR5;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = Dobble/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.garageminfinita.Dobble;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		79FA5B8425D1663E0057FC51 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Dobble/Preview Content\"";
+				DEVELOPMENT_TEAM = L2BC5TCSR5;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = Dobble/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.garageminfinita.Dobble;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		79FA5B8625D1663E0057FC51 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L2BC5TCSR5;
+				INFOPLIST_FILE = DobbleTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.garageminfinita.DobbleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Dobble.app/Dobble";
+			};
+			name = Debug;
+		};
+		79FA5B8725D1663E0057FC51 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L2BC5TCSR5;
+				INFOPLIST_FILE = DobbleTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.garageminfinita.DobbleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Dobble.app/Dobble";
+			};
+			name = Release;
+		};
+		79FA5B8925D1663E0057FC51 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L2BC5TCSR5;
+				INFOPLIST_FILE = DobbleUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.garageminfinita.DobbleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Dobble;
+			};
+			name = Debug;
+		};
+		79FA5B8A25D1663E0057FC51 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L2BC5TCSR5;
+				INFOPLIST_FILE = DobbleUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.garageminfinita.DobbleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Dobble;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		79FA5B5825D166380057FC51 /* Build configuration list for PBXProject "Dobble" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				79FA5B8025D1663E0057FC51 /* Debug */,
+				79FA5B8125D1663E0057FC51 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		79FA5B8225D1663E0057FC51 /* Build configuration list for PBXNativeTarget "Dobble" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				79FA5B8325D1663E0057FC51 /* Debug */,
+				79FA5B8425D1663E0057FC51 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		79FA5B8525D1663E0057FC51 /* Build configuration list for PBXNativeTarget "DobbleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				79FA5B8625D1663E0057FC51 /* Debug */,
+				79FA5B8725D1663E0057FC51 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		79FA5B8825D1663E0057FC51 /* Build configuration list for PBXNativeTarget "DobbleUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				79FA5B8925D1663E0057FC51 /* Debug */,
+				79FA5B8A25D1663E0057FC51 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 79FA5B5525D166380057FC51 /* Project object */;
+}
