@@ -8,18 +8,18 @@
 import SwiftUI
 
 struct SettingsView: View {
-    @State private var multiPlayerMode: Bool = false
-    
+    @ObservedObject var gameController = GameController()
+        
     @State private var difficulty: Int = 1
     
     var body: some View {
         Form {
             Section {
-                Toggle(isOn: $multiPlayerMode, label: {
+                Toggle(isOn: $gameController.multiplayer, label: {
                     Text("Multiplayer Mode")
                 })
-                Stepper(value: $difficulty, in: 1...5) {
-                    Text("Difficulty Level: \(difficulty)")
+                Stepper(value: $gameController.difficulty, in: 1...5) {
+                    Text("Difficulty Level: \(gameController.difficulty)")
                 }
             }
         }

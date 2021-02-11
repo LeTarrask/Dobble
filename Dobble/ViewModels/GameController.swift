@@ -10,6 +10,10 @@ import Foundation
 class GameController: ObservableObject {
     var cards: [Card] = [Card]()
     
+    @Published var multiplayer: Bool = false
+    
+    @Published var difficulty: Int = 1
+    
     @Published var score: Int = 0
     
     @Published var timeLeft: Float = 0.0
