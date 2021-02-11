@@ -8,16 +8,21 @@
 import SwiftUI
 
 struct SinglePlayerView: View {
-    @ObservedObject var gameController = GameController()
+    @ObservedObject var gameController = SinglePlayerGameController()
+    
+    @State var isPlaying: Bool = true
     
     var body: some View {
-        VStack {
-            Text("Score: \(String(describing: gameController.score))")
+        ZStack {
             VStack {
-                ForEach(gameController.showingCards, id: \.self) { card in
-                    CardView(chosen: card, gameController: gameController)
+                Text("Score: \(String(describing: gameController.score))")
+                VStack {
+                    ForEach(gameController.showingCards, id: \.self) { card in
+                        CardView(chosen: card, gameController: gameController)
+                    }
                 }
             }
+            GameOver(show: $isPlaying)
         }
     }
 }

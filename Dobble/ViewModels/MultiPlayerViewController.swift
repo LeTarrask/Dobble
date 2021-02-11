@@ -1,18 +1,20 @@
 //
-//  GameModel.swift
+//  MultiPlayerViewController.swift
 //  Dobble
 //
-//  Created by Alex Luna on 08/02/2021.
+//  Created by Alex Luna on 11/02/2021.
 //
 
 import Foundation
 
-class GameController: ObservableObject {
+class MultiPlayerGameController: ObservableObject {
     var cards: [Card]
     
     @Published var score: Int = 0
     
     @Published var showingCards: [Card]
+    
+    @Published var gameOver: Bool = false
     
     func pick(value: String) {
         print("Testing value \(value)")
@@ -39,6 +41,9 @@ class GameController: ObservableObject {
     }
     
     func getTwoCards() {
+        if cards.count <= 1 {
+            gameOver = true
+        }
         let card1 = cards.randomElement()
         var card2 = cards.randomElement()
         

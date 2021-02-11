@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct MultiplayerView: View {
-    @ObservedObject var gameController = GameController()
+    @ObservedObject var gameController = MultiPlayerGameController()
     
     @State var isPlaying: Bool = true
     
@@ -24,32 +24,6 @@ struct MultiplayerView: View {
             }
             
             GameOver(show: $isPlaying)
-        }
-    }
-}
-
-struct GameOver: View {
-    @Binding var show: Bool
-
-    var body: some View {
-        ZStack {
-            if !show {
-                ZStack {
-                    RoundedRectangle(cornerRadius: 25)
-                        .frame(width: 180, height: 180)
-                        .foregroundColor(.red)
-                    VStack {
-                        Text("Game Over")
-                            .foregroundColor(.white)
-                            .font(.headline)
-                            .fontWeight(.black)
-                        Button("Play again") {
-                            show.toggle()
-                        }.foregroundColor(.white)
-                        .font(.subheadline)
-                    }
-                }
-            }
         }
     }
 }
