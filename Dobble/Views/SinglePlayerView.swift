@@ -12,13 +12,16 @@ struct SinglePlayerView: View {
     
     @State var isPlaying: Bool = true
     
+    @State private var timeRemaining = 580
+    let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+    
     var body: some View {
         ZStack {
             VStack {
                 HStack {
                     Text("Score: \(String(describing: gameController.score))")
                     Spacer()
-                    Text("Time left: \(String(describing: gameController.timeLeft))")
+                    Text("Time left: \(timeRemaining)")
                 }
                 .padding(.horizontal)
                 VStack {
@@ -29,6 +32,11 @@ struct SinglePlayerView: View {
             }
             if gameController.gameOver {
                 GameOver(gameController: gameController)
+            }
+        }
+        .onReceive(timer) { time in
+            if self.timeRemaining > 0 {
+                self.timeRemaining -= 1
             }
         }
     }

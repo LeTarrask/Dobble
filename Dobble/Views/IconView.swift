@@ -13,6 +13,5 @@ struct IconView: View {
     var body: some View {
         Text(image)
             .font(.system(size: CGFloat.random(in: 20..<60)))
-            .rotationEffect(.degrees(Double.random(in: 0..<360)))
     }
 }
