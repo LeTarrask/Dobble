@@ -10,11 +10,12 @@ import Foundation
 class GameController: ObservableObject {
     var cards: [Card] = [Card]()
     
-    @Published var multiplayer: Bool = false
+    @Published var multiplayer: Bool = true
     
     @Published var difficulty: Int = 1
     
     @Published var score: Int = 0
+    @Published var scoreTwo: Int = 0
     
     @Published var timeLeft: Float = 0.0
     
@@ -31,33 +32,64 @@ class GameController: ObservableObject {
         }
     }
     
-    func pick(value: String) {
+    func removeFromDeck(picks: [Card]) {
+        // remove these cards from deck
+        if let index = cards.firstIndex(of: picks[0]) {
+            cards.remove(at: index)
+        }
+        if let index = cards.firstIndex(of: picks[1]) {
+            cards.remove(at: index)
+        }
+        
+        // remove these cards from showingCards
+        showingCards = []
+        
+        print(cards.count)
+        if cards.count <= 50 {
+            gameOver.toggle()
+            score = 0
+            scoreTwo = 0
+            return
+        }
+    }
+    
+    func pick(value: String, chosen: Card) {
         let card1 = showingCards[0]
         let card2 = showingCards[1]
+        
+        // check if touch is matched value
         if card1.images.contains(value) && card2.images.contains(value) {
-            score += 1
-            
-            // remove these cards from deck
-            if let index = cards.firstIndex(of: card1) {
-                cards.remove(at: index)
+            if multiplayer {
+                if chosen == card1 {
+                    score += 1
+                } else {
+                    scoreTwo += 1
+                }
+                removeFromDeck(picks: [card1, card2])
+                
+                getTwoCards()
+            } else {
+                score += 1
+                
+                removeFromDeck(picks: [card1, card2])
+
+                getTwoCards()
             }
-            if let index = cards.firstIndex(of: card2) {
-                cards.remove(at: index)
+        } else {
+            // what happens if player/s touch wrong image
+            if multiplayer {
+                if chosen == card1 {
+                    score -= 1
+                } else {
+                    scoreTwo -= 1
+                }
+            } else {
+                score -= 1
             }
-            
-            // remove these cards from showingCards
-            showingCards = []
-            
-            print(cards.count)
-            if cards.count <= 50 {
-                gameOver.toggle()
-                score = 0
-                return
-            }
-            
-            // draw two new cards
-            getTwoCards()
         }
+            
+        
+        
     }
     
     func getTwoCards() {

@@ -24,7 +24,7 @@ struct MultiplayerView: View {
                 Spacer()
                 VStack {
                     HStack {
-                        Text("Score: \(String(describing: gameController.score))")
+                        Text("Score: \(String(describing: gameController.scoreTwo))")
                         Spacer()
                         Text("Time left: \(String(describing: gameController.timeLeft))")
                     }.padding(.horizontal)

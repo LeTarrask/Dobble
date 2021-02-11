@@ -21,7 +21,7 @@ struct CardView: View {
                     ForEach(chosen.images[0...3], id: \.self) { image in
                         IconView(image: image)
                             .onTapGesture {
-                                gameController.pick(value: image)
+                                gameController.pick(value: image, chosen: chosen)
                             }
                     }
                 }
@@ -29,7 +29,7 @@ struct CardView: View {
                     ForEach(chosen.images[4...7], id: \.self) { image in
                         IconView(image: image)
                             .onTapGesture {
-                                gameController.pick(value: image)
+                                gameController.pick(value: image, chosen: chosen)
                             }
                     }
                 }
