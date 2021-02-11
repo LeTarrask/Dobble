@@ -11,7 +11,6 @@
 		79BC220725D564780088C488 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BC220625D564780088C488 /* CardView.swift */; };
 		79BC220C25D5648D0088C488 /* IconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BC220B25D5648D0088C488 /* IconView.swift */; };
 		79BC221125D56D870088C488 /* GameOver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BC221025D56D870088C488 /* GameOver.swift */; };
-		79BC221925D56FCA0088C488 /* MultiPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BC221825D56FCA0088C488 /* MultiPlayerViewController.swift */; };
 		79BC221E25D578290088C488 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BC221D25D578290088C488 /* SettingsView.swift */; };
 		79FA5B6125D166380057FC51 /* DobbleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FA5B6025D166380057FC51 /* DobbleApp.swift */; };
 		79FA5B6325D166380057FC51 /* SinglePlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FA5B6225D166380057FC51 /* SinglePlayerView.swift */; };
@@ -24,8 +23,8 @@
 		79FA5BA525D17A4E0057FC51 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FA5B9D25D1729A0057FC51 /* Card.swift */; };
 		79FA5BAA25D17DC70057FC51 /* extension+Array+similarElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FA5BA925D17DC70057FC51 /* extension+Array+similarElements.swift */; };
 		79FA5BB225D190B30057FC51 /* Decks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FA5BB125D190B30057FC51 /* Decks.swift */; };
-		79FA5BB725D1923C0057FC51 /* SinglePlayerGameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FA5BB625D1923C0057FC51 /* SinglePlayerGameController.swift */; };
-		79FA5BB825D1923C0057FC51 /* SinglePlayerGameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FA5BB625D1923C0057FC51 /* SinglePlayerGameController.swift */; };
+		79FA5BB725D1923C0057FC51 /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FA5BB625D1923C0057FC51 /* GameController.swift */; };
+		79FA5BB825D1923C0057FC51 /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FA5BB625D1923C0057FC51 /* GameController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +49,6 @@
 		79BC220625D564780088C488 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		79BC220B25D5648D0088C488 /* IconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconView.swift; sourceTree = "<group>"; };
 		79BC221025D56D870088C488 /* GameOver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOver.swift; sourceTree = "<group>"; };
-		79BC221825D56FCA0088C488 /* MultiPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiPlayerViewController.swift; sourceTree = "<group>"; };
 		79BC221D25D578290088C488 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		79FA5B5D25D166380057FC51 /* Dobble.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dobble.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79FA5B6025D166380057FC51 /* DobbleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DobbleApp.swift; sourceTree = "<group>"; };
@@ -68,7 +66,7 @@
 		79FA5B9D25D1729A0057FC51 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		79FA5BA925D17DC70057FC51 /* extension+Array+similarElements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "extension+Array+similarElements.swift"; path = "Dobble/ViewModels/extension+Array+similarElements.swift"; sourceTree = SOURCE_ROOT; };
 		79FA5BB125D190B30057FC51 /* Decks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Decks.swift; sourceTree = "<group>"; };
-		79FA5BB625D1923C0057FC51 /* SinglePlayerGameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SinglePlayerGameController.swift; path = Dobble/ViewModels/SinglePlayerGameController.swift; sourceTree = SOURCE_ROOT; };
+		79FA5BB625D1923C0057FC51 /* GameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GameController.swift; path = Dobble/ViewModels/GameController.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,8 +180,7 @@
 		79FA5B9025D166610057FC51 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				79FA5BB625D1923C0057FC51 /* SinglePlayerGameController.swift */,
-				79BC221825D56FCA0088C488 /* MultiPlayerViewController.swift */,
+				79FA5BB625D1923C0057FC51 /* GameController.swift */,
 				79FA5B9125D166A00057FC51 /* CardGenerator.swift */,
 			);
 			path = ViewModels;
@@ -324,9 +321,8 @@
 				79BC221125D56D870088C488 /* GameOver.swift in Sources */,
 				79FA5B6325D166380057FC51 /* SinglePlayerView.swift in Sources */,
 				79BC220C25D5648D0088C488 /* IconView.swift in Sources */,
-				79BC221925D56FCA0088C488 /* MultiPlayerViewController.swift in Sources */,
 				79FA5B6125D166380057FC51 /* DobbleApp.swift in Sources */,
-				79FA5BB725D1923C0057FC51 /* SinglePlayerGameController.swift in Sources */,
+				79FA5BB725D1923C0057FC51 /* GameController.swift in Sources */,
 				79BC221E25D578290088C488 /* SettingsView.swift in Sources */,
 				79BC220725D564780088C488 /* CardView.swift in Sources */,
 				79FA5B9E25D1729A0057FC51 /* Card.swift in Sources */,
@@ -338,7 +334,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				79FA5B7325D1663E0057FC51 /* DobbleTests.swift in Sources */,
-				79FA5BB825D1923C0057FC51 /* SinglePlayerGameController.swift in Sources */,
+				79FA5BB825D1923C0057FC51 /* GameController.swift in Sources */,
 				79FA5BA525D17A4E0057FC51 /* Card.swift in Sources */,
 				79FA5B9625D169900057FC51 /* CardGenerator.swift in Sources */,
 			);

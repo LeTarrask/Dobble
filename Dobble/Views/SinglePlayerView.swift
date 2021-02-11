@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SinglePlayerView: View {
-    @ObservedObject var gameController = SinglePlayerGameController()
+    @ObservedObject var gameController = GameController()
     
     @State var isPlaying: Bool = true
     

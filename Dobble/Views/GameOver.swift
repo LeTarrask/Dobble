@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct GameOver: View {
-    @ObservedObject var gameController: SinglePlayerGameController
+    @ObservedObject var gameController: GameController
 
     var body: some View {
         ZStack {
@@ -31,6 +31,6 @@ struct GameOver: View {
 
 struct GameOver_Previews: PreviewProvider {
     static var previews: some View {
-        GameOver(gameController: SinglePlayerGameController())
+        GameOver(gameController: GameController())
     }
 }

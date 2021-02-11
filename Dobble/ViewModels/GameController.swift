@@ -7,7 +7,7 @@
 
 import Foundation
 
-class SinglePlayerGameController: ObservableObject {
+class GameController: ObservableObject {
     var cards: [Card] = [Card]()
     
     @Published var score: Int = 0
