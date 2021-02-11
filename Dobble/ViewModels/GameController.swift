@@ -9,15 +9,14 @@ import Foundation
 
 class GameController: ObservableObject {
     var cards: [Card] = [Card]()
+    @Published var showingCards: [Card] = [Card]()
     
-    @Published var multiplayer: Bool = true
+    @Published var multiplayer: Bool = false
     
     @Published var difficulty: Int = 1
     
     @Published var score: Int = 0
     @Published var scoreTwo: Int = 0
-        
-    @Published var showingCards: [Card] = [Card]()
     
     @Published var gameOver: Bool = false {
         didSet {
@@ -25,6 +24,7 @@ class GameController: ObservableObject {
                 cards = []
             } else {
                 score = 0
+                scoreTwo = 0
                 drawDeck()
             }
         }
@@ -41,14 +41,6 @@ class GameController: ObservableObject {
         
         // remove these cards from showingCards
         showingCards = []
-        
-        print(cards.count)
-        if cards.count <= 1 {
-            gameOver.toggle()
-            score = 0
-            scoreTwo = 0
-            return
-        }
     }
     
     func pick(value: String, chosen: Card) {
@@ -63,15 +55,14 @@ class GameController: ObservableObject {
                 } else {
                     scoreTwo += 1
                 }
-                removeFromDeck(picks: [card1, card2])
-                
-                getTwoCards()
             } else {
                 score += 1
-                
+            }
+            if cards.count > 3 {
                 removeFromDeck(picks: [card1, card2])
-
                 getTwoCards()
+            } else {
+                gameOver = true
             }
         } else {
             // what happens if player/s touch wrong image
@@ -85,9 +76,6 @@ class GameController: ObservableObject {
                 score -= 1
             }
         }
-            
-        
-        
     }
     
     func getTwoCards() {

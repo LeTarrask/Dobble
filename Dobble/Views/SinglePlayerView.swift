@@ -10,7 +10,7 @@ import SwiftUI
 struct SinglePlayerView: View {
     @ObservedObject var gameController = GameController()
         
-    @State private var timeRemaining = 580
+    @State private var timeRemaining = 300
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     @State private var isActive = true
     
@@ -54,7 +54,7 @@ struct SinglePlayerView: View {
             }
         }
         .onReceive(timer) { time in
-//            guard self.isActive else { return }
+            guard self.isActive else { return }
             if self.timeRemaining > 0 {
                 self.timeRemaining -= 1
             }
@@ -63,12 +63,12 @@ struct SinglePlayerView: View {
                 isActive = false
             }
         }
-//        .onReceive(NotificationCenter.default.publisher(for: UIApplication.willResignActiveNotification)) { _ in
-//            self.isActive = false
-//        }
-//        .onReceive(NotificationCenter.default.publisher(for: UIApplication.willEnterForegroundNotification)) { _ in
-//            self.isActive = true
-//        }
+        .onReceive(NotificationCenter.default.publisher(for: UIApplication.willResignActiveNotification)) { _ in
+            self.isActive = false
+        }
+        .onReceive(NotificationCenter.default.publisher(for: UIApplication.willEnterForegroundNotification)) { _ in
+            self.isActive = true
+        }
     }
 }
 

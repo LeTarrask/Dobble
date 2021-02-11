@@ -11,6 +11,7 @@
 		79BC220725D564780088C488 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BC220625D564780088C488 /* CardView.swift */; };
 		79BC220C25D5648D0088C488 /* IconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BC220B25D5648D0088C488 /* IconView.swift */; };
 		79BC221E25D578290088C488 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BC221D25D578290088C488 /* SettingsView.swift */; };
+		79BC222E25D5F27D0088C488 /* Decks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FA5BB125D190B30057FC51 /* Decks.swift */; };
 		79FA5B6125D166380057FC51 /* DobbleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FA5B6025D166380057FC51 /* DobbleApp.swift */; };
 		79FA5B6325D166380057FC51 /* SinglePlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FA5B6225D166380057FC51 /* SinglePlayerView.swift */; };
 		79FA5B6525D1663E0057FC51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79FA5B6425D1663E0057FC51 /* Assets.xcassets */; };
@@ -330,6 +331,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				79FA5B7325D1663E0057FC51 /* DobbleTests.swift in Sources */,
+				79BC222E25D5F27D0088C488 /* Decks.swift in Sources */,
 				79FA5BB825D1923C0057FC51 /* GameController.swift in Sources */,
 				79FA5BA525D17A4E0057FC51 /* Card.swift in Sources */,
 				79FA5B9625D169900057FC51 /* CardGenerator.swift in Sources */,
