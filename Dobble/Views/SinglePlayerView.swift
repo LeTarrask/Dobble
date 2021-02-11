@@ -15,7 +15,12 @@ struct SinglePlayerView: View {
     var body: some View {
         ZStack {
             VStack {
-                Text("Score: \(String(describing: gameController.score))")
+                HStack {
+                    Text("Score: \(String(describing: gameController.score))")
+                    Spacer()
+                    Text("Time left: \(String(describing: gameController.timeLeft))")
+                }
+                .padding(.horizontal)
                 VStack {
                     ForEach(gameController.showingCards, id: \.self) { card in
                         CardView(chosen: card, gameController: gameController)

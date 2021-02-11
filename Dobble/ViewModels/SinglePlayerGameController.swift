@@ -12,6 +12,8 @@ class SinglePlayerGameController: ObservableObject {
     
     @Published var score: Int = 0
     
+    @Published var timeLeft: Float = 0.0
+    
     @Published var showingCards: [Card] = [Card]()
     
     @Published var gameOver: Bool = false {
