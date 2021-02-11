@@ -10,7 +10,6 @@
 		79BC220225D564510088C488 /* MultiplayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BC220125D564510088C488 /* MultiplayerView.swift */; };
 		79BC220725D564780088C488 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BC220625D564780088C488 /* CardView.swift */; };
 		79BC220C25D5648D0088C488 /* IconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BC220B25D5648D0088C488 /* IconView.swift */; };
-		79BC221125D56D870088C488 /* GameOver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BC221025D56D870088C488 /* GameOver.swift */; };
 		79BC221E25D578290088C488 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BC221D25D578290088C488 /* SettingsView.swift */; };
 		79FA5B6125D166380057FC51 /* DobbleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FA5B6025D166380057FC51 /* DobbleApp.swift */; };
 		79FA5B6325D166380057FC51 /* SinglePlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FA5B6225D166380057FC51 /* SinglePlayerView.swift */; };
@@ -48,7 +47,6 @@
 		79BC220125D564510088C488 /* MultiplayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiplayerView.swift; sourceTree = "<group>"; };
 		79BC220625D564780088C488 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		79BC220B25D5648D0088C488 /* IconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconView.swift; sourceTree = "<group>"; };
-		79BC221025D56D870088C488 /* GameOver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOver.swift; sourceTree = "<group>"; };
 		79BC221D25D578290088C488 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		79FA5B5D25D166380057FC51 /* Dobble.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dobble.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79FA5B6025D166380057FC51 /* DobbleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DobbleApp.swift; sourceTree = "<group>"; };
@@ -172,7 +170,6 @@
 				79BC221D25D578290088C488 /* SettingsView.swift */,
 				79BC220625D564780088C488 /* CardView.swift */,
 				79BC220B25D5648D0088C488 /* IconView.swift */,
-				79BC221025D56D870088C488 /* GameOver.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -318,7 +315,6 @@
 				79FA5BB225D190B30057FC51 /* Decks.swift in Sources */,
 				79FA5BAA25D17DC70057FC51 /* extension+Array+similarElements.swift in Sources */,
 				79BC220225D564510088C488 /* MultiplayerView.swift in Sources */,
-				79BC221125D56D870088C488 /* GameOver.swift in Sources */,
 				79FA5B6325D166380057FC51 /* SinglePlayerView.swift in Sources */,
 				79BC220C25D5648D0088C488 /* IconView.swift in Sources */,
 				79FA5B6125D166380057FC51 /* DobbleApp.swift in Sources */,

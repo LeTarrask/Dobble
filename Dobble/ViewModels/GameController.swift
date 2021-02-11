@@ -43,7 +43,7 @@ class GameController: ObservableObject {
         showingCards = []
         
         print(cards.count)
-        if cards.count <= 50 {
+        if cards.count <= 1 {
             gameOver.toggle()
             score = 0
             scoreTwo = 0

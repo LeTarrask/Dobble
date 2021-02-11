@@ -9,9 +9,7 @@ import SwiftUI
 
 struct MultiplayerView: View {
     @ObservedObject var gameController = GameController()
-    
-    @State var isPlaying: Bool = true
-    
+        
     var body: some View {
         ZStack {
             VStack {
@@ -33,7 +31,21 @@ struct MultiplayerView: View {
                 .rotationEffect(.degrees(180))
             }
             if gameController.gameOver {
-                GameOver(gameController: gameController)
+                ZStack {
+                    RoundedRectangle(cornerRadius: 25)
+                        .frame(width: 180, height: 180)
+                        .foregroundColor(.red)
+                    VStack {
+                        Text("Game Over")
+                            .foregroundColor(.white)
+                            .font(.headline)
+                            .fontWeight(.black)
+                        Button("Play again") {
+                            gameController.gameOver.toggle()
+                        }.foregroundColor(.white)
+                        .font(.subheadline)
+                    }
+                }
             }
         }
     }

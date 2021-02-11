@@ -9,17 +9,20 @@ import SwiftUI
 
 struct SinglePlayerView: View {
     @ObservedObject var gameController = GameController()
-    
-    @State var isPlaying: Bool = true
-    
+        
     @State private var timeRemaining = 580
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+    @State private var isActive = true
+    
+    init() {
+        timeRemaining = timeRemaining/gameController.difficulty
+    }
     
     var body: some View {
         ZStack {
             VStack {
                 HStack {
-                    Text("Score: \(String(describing: gameController.score))")
+                    Text("Score: \(gameController.score)")
                     Spacer()
                     Text("Time left: \(timeRemaining)")
                 }
@@ -31,14 +34,41 @@ struct SinglePlayerView: View {
                 }
             }
             if gameController.gameOver {
-                GameOver(gameController: gameController)
+                ZStack {
+                    RoundedRectangle(cornerRadius: 25)
+                        .frame(width: 180, height: 180)
+                        .foregroundColor(.red)
+                    VStack {
+                        Text("Game Over")
+                            .foregroundColor(.white)
+                            .font(.headline)
+                            .fontWeight(.black)
+                        Button("Play again") {
+                            gameController.gameOver.toggle()
+                            timeRemaining = 580/gameController.difficulty
+                            isActive = true
+                        }.foregroundColor(.white)
+                        .font(.subheadline)
+                    }
+                }
             }
         }
         .onReceive(timer) { time in
+//            guard self.isActive else { return }
             if self.timeRemaining > 0 {
                 self.timeRemaining -= 1
             }
+            if self.timeRemaining == 0 {
+                gameController.gameOver = true
+                isActive = false
+            }
         }
+//        .onReceive(NotificationCenter.default.publisher(for: UIApplication.willResignActiveNotification)) { _ in
+//            self.isActive = false
+//        }
+//        .onReceive(NotificationCenter.default.publisher(for: UIApplication.willEnterForegroundNotification)) { _ in
+//            self.isActive = true
+//        }
     }
 }
 
