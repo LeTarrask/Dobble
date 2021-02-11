@@ -1,26 +1,11 @@
 //
-//  ContentView.swift
+//  CardView.swift
 //  Dobble
 //
-//  Created by Alex Luna on 08/02/2021.
+//  Created by Alex Luna on 11/02/2021.
 //
 
 import SwiftUI
-
-struct GameView: View {
-    @ObservedObject var gameController = GameController()
-    
-    var body: some View {
-        VStack {
-            Text("Score: \(String(describing: gameController.score))")
-            VStack {
-                ForEach(gameController.showingCards, id: \.self) { card in
-                    CardView(chosen: card, gameController: gameController)
-                }
-            }
-        }
-    }
-}
 
 struct CardView: View {
     let chosen: Card
@@ -53,17 +38,3 @@ struct CardView: View {
     }
 }
 
-struct IconView: View {
-    let image: String
-    
-    var body: some View {
-        Text(image)
-            .font(.system(size: CGFloat.random(in: 20..<60)))
-    }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        GameView()
-    }
-}
