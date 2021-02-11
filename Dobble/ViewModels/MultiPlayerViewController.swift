@@ -21,7 +21,6 @@ class MultiPlayerGameController: ObservableObject {
         let card1 = showingCards[0]
         let card2 = showingCards[1]
         if card1.images.contains(value) && card2.images.contains(value) {
-            // both cards have value. should add points, create congratulation screen
             score += 1
             
             // remove these cards from deck

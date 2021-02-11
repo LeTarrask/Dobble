@@ -8,26 +8,22 @@
 import SwiftUI
 
 struct GameOver: View {
-    @Binding var show: Bool
+    @ObservedObject var gameController: SinglePlayerGameController
 
     var body: some View {
         ZStack {
-            if !show {
-                ZStack {
-                    RoundedRectangle(cornerRadius: 25)
-                        .frame(width: 180, height: 180)
-                        .foregroundColor(.red)
-                    VStack {
-                        Text("Game Over")
-                            .foregroundColor(.white)
-                            .font(.headline)
-                            .fontWeight(.black)
-                        Button("Play again") {
-                            show.toggle()
-                        }.foregroundColor(.white)
-                        .font(.subheadline)
-                    }
-                }
+            RoundedRectangle(cornerRadius: 25)
+                .frame(width: 180, height: 180)
+                .foregroundColor(.red)
+            VStack {
+                Text("Game Over")
+                    .foregroundColor(.white)
+                    .font(.headline)
+                    .fontWeight(.black)
+                Button("Play again") {
+                    gameController.gameOver.toggle()
+                }.foregroundColor(.white)
+                .font(.subheadline)
             }
         }
     }
@@ -35,6 +31,6 @@ struct GameOver: View {
 
 struct GameOver_Previews: PreviewProvider {
     static var previews: some View {
-        GameOver(show: .constant(false))
+        GameOver(gameController: SinglePlayerGameController())
     }
 }

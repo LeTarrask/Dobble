@@ -22,7 +22,9 @@ struct SinglePlayerView: View {
                     }
                 }
             }
-            GameOver(show: $isPlaying)
+            if gameController.gameOver {
+                GameOver(gameController: gameController)
+            }
         }
     }
 }

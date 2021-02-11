@@ -8,20 +8,27 @@
 import Foundation
 
 class SinglePlayerGameController: ObservableObject {
-    var cards: [Card]
+    var cards: [Card] = [Card]()
     
     @Published var score: Int = 0
     
-    @Published var showingCards: [Card]
+    @Published var showingCards: [Card] = [Card]()
     
-    @Published var gameOver: Bool = false
+    @Published var gameOver: Bool = false {
+        didSet {
+            if gameOver == true {
+                cards = []
+            } else {
+                score = 0
+                drawDeck()
+            }
+        }
+    }
     
     func pick(value: String) {
-        print("Testing value \(value)")
         let card1 = showingCards[0]
         let card2 = showingCards[1]
         if card1.images.contains(value) && card2.images.contains(value) {
-            // both cards have value. should add points, create congratulation screen
             score += 1
             
             // remove these cards from deck
@@ -35,15 +42,19 @@ class SinglePlayerGameController: ObservableObject {
             // remove these cards from showingCards
             showingCards = []
             
-            // add two new cards
+            print(cards.count)
+            if cards.count <= 50 {
+                gameOver.toggle()
+                score = 0
+                return
+            }
+            
+            // draw two new cards
             getTwoCards()
         }
     }
     
     func getTwoCards() {
-        if cards.count <= 1 {
-            gameOver = true
-        }
         let card1 = cards.randomElement()
         var card2 = cards.randomElement()
         
@@ -55,14 +66,18 @@ class SinglePlayerGameController: ObservableObject {
         showingCards.append(card2!)
     }
     
-    init() {
+    func drawDeck() {
         // We can choose any different deck of images here
-        let deck = emojiDeck()
-        cards = deck.cards
+        cards = emojiDeck().cards
         
-        showingCards = [Card]()
+        showingCards = []
+        
         if cards.count == 57 {
             getTwoCards()
         }
+    }
+    
+    init() {
+        drawDeck()
     }
 }
