@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		79FA5B6125D166380057FC51 /* DobbleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FA5B6025D166380057FC51 /* DobbleApp.swift */; };
-		79FA5B6325D166380057FC51 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FA5B6225D166380057FC51 /* ContentView.swift */; };
+		79FA5B6325D166380057FC51 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FA5B6225D166380057FC51 /* GameView.swift */; };
 		79FA5B6525D1663E0057FC51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79FA5B6425D1663E0057FC51 /* Assets.xcassets */; };
 		79FA5B6825D1663E0057FC51 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79FA5B6725D1663E0057FC51 /* Preview Assets.xcassets */; };
 		79FA5B7325D1663E0057FC51 /* DobbleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FA5B7225D1663E0057FC51 /* DobbleTests.swift */; };
@@ -42,7 +42,7 @@
 /* Begin PBXFileReference section */
 		79FA5B5D25D166380057FC51 /* Dobble.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dobble.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79FA5B6025D166380057FC51 /* DobbleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DobbleApp.swift; sourceTree = "<group>"; };
-		79FA5B6225D166380057FC51 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		79FA5B6225D166380057FC51 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 		79FA5B6425D1663E0057FC51 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		79FA5B6725D1663E0057FC51 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		79FA5B6925D1663E0057FC51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -157,7 +157,7 @@
 		79FA5B8F25D166520057FC51 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				79FA5B6225D166380057FC51 /* ContentView.swift */,
+				79FA5B6225D166380057FC51 /* GameView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -302,7 +302,7 @@
 			files = (
 				79FA5BB225D190B30057FC51 /* Decks.swift in Sources */,
 				79FA5BAA25D17DC70057FC51 /* extension+Array+similarElements.swift in Sources */,
-				79FA5B6325D166380057FC51 /* ContentView.swift in Sources */,
+				79FA5B6325D166380057FC51 /* GameView.swift in Sources */,
 				79FA5B6125D166380057FC51 /* DobbleApp.swift in Sources */,
 				79FA5BB725D1923C0057FC51 /* GameController.swift in Sources */,
 				79FA5B9E25D1729A0057FC51 /* Card.swift in Sources */,
