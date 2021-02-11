@@ -15,15 +15,26 @@ struct MultiplayerView: View {
     var body: some View {
         ZStack {
             VStack {
-                Text("Score: \(String(describing: gameController.score))")
+                HStack {
+                    Text("Score: \(String(describing: gameController.score))")
+                    Spacer()
+                    Text("Time left: \(String(describing: gameController.timeLeft))")
+                }.padding(.horizontal)
+                CardView(chosen: gameController.showingCards[0], gameController: gameController)
+                Spacer()
                 VStack {
-//                    ForEach(gameController.showingCards, id: \.self) { card in
-//                        CardView(chosen: card, gameController: gameController)
-//                    }
+                    HStack {
+                        Text("Score: \(String(describing: gameController.score))")
+                        Spacer()
+                        Text("Time left: \(String(describing: gameController.timeLeft))")
+                    }.padding(.horizontal)
+                    CardView(chosen: gameController.showingCards[1], gameController: gameController)
                 }
+                .rotationEffect(.degrees(180))
             }
-            
-//            GameOver(show: $isPlaying)
+            if gameController.gameOver {
+                GameOver(gameController: gameController)
+            }
         }
     }
 }
