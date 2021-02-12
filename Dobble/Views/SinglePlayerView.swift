@@ -44,7 +44,7 @@ struct SinglePlayerView: View {
                             .font(.headline)
                             .fontWeight(.black)
                         Button("Play again") {
-                            gameController.gameOver.toggle()
+                            gameController.gameOver = false
                             timeRemaining = 580/gameController.difficulty
                             isActive = true
                         }.foregroundColor(.white)
