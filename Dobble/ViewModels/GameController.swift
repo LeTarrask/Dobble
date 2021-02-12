@@ -69,15 +69,11 @@ class GameController: ObservableObject {
     
     func getTwoCards() {
         let card1 = cards.randomElement()
-        var card2 = cards.randomElement()
-        
-        while card1 == card2 {
-            card2 = cards.randomElement()
-        }
-        
         if let index = cards.firstIndex(of: card1!) {
             cards.remove(at: index)
         }
+        
+        let card2 = cards.randomElement()
         if let index = cards.firstIndex(of: card2!) {
             cards.remove(at: index)
         }
