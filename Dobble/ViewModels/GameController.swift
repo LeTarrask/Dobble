@@ -20,27 +20,13 @@ class GameController: ObservableObject {
     
     @Published var gameOver: Bool = false {
         didSet {
-            if gameOver == true {
+            if gameOver == false {
                 cards = []
-            } else {
                 score = 0
                 scoreTwo = 0
                 drawDeck()
             }
         }
-    }
-    
-    func removeFromDeck(picks: [Card]) {
-        // remove these cards from deck
-        if let index = cards.firstIndex(of: picks[0]) {
-            cards.remove(at: index)
-        }
-        if let index = cards.firstIndex(of: picks[1]) {
-            cards.remove(at: index)
-        }
-        
-        // remove these cards from showingCards
-        showingCards = []
     }
     
     func pick(value: String, chosen: Card) {
@@ -58,12 +44,15 @@ class GameController: ObservableObject {
             } else {
                 score += 1
             }
-            if cards.count > 3 {
-                removeFromDeck(picks: [card1, card2])
-                getTwoCards()
-            } else {
+            
+            showingCards = []
+            
+            if cards.count == 1 {
                 gameOver = true
+            } else {
+                getTwoCards()
             }
+
         } else {
             // what happens if player/s touch wrong image
             if multiplayer {
@@ -84,6 +73,13 @@ class GameController: ObservableObject {
         
         while card1 == card2 {
             card2 = cards.randomElement()
+        }
+        
+        if let index = cards.firstIndex(of: card1!) {
+            cards.remove(at: index)
+        }
+        if let index = cards.firstIndex(of: card2!) {
+            cards.remove(at: index)
         }
         
         showingCards.append(card1!)
