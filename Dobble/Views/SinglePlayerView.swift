@@ -43,6 +43,7 @@ struct SinglePlayerView: View {
                             .foregroundColor(.white)
                             .font(.headline)
                             .fontWeight(.black)
+                        Text("You scored \(GameController.score * timeRemaining)")
                         Button("Play again") {
                             gameController.gameOver = false
                             timeRemaining = 580/gameController.difficulty
