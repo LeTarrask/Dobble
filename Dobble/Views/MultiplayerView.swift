@@ -16,7 +16,6 @@ struct MultiplayerView: View {
                 HStack {
                     Text("Score: \(String(describing: gameController.score))")
                     Spacer()
-//                    Text("Time left: \(String(describing: gameController.timeLeft))")
                 }.padding(.horizontal)
                 CardView(chosen: gameController.showingCards[0], gameController: gameController)
                 Spacer()
@@ -24,7 +23,6 @@ struct MultiplayerView: View {
                     HStack {
                         Text("Score: \(String(describing: gameController.scoreTwo))")
                         Spacer()
-//                        Text("Time left: \(String(describing: gameController.timeLeft))")
                     }.padding(.horizontal)
                     CardView(chosen: gameController.showingCards[1], gameController: gameController)
                 }
@@ -40,6 +38,11 @@ struct MultiplayerView: View {
                             .foregroundColor(.white)
                             .font(.headline)
                             .fontWeight(.black)
+                        if gameController.score > gameController.scoreTwo {
+                            Text("Player 1 wins")
+                        } else {
+                            Text("Player 2 wins")
+                        }
                         Button("Play again") {
                             gameController.gameOver.toggle()
                         }.foregroundColor(.white)
