@@ -22,9 +22,9 @@ struct SinglePlayerView: View {
         ZStack {
             VStack {
                 HStack {
-                    Text("Score: \(gameController.score)")
+                    Text(NSLocalizedString("Score: ", comment: "") + String(gameController.score))
                     Spacer()
-                    Text("Time left: \(timeRemaining)")
+                    Text(NSLocalizedString("Time left: ", comment: "") + String(timeRemaining))
                 }
                 .padding(.horizontal)
                 VStack {
@@ -39,12 +39,12 @@ struct SinglePlayerView: View {
                         .frame(width: 180, height: 180)
                         .foregroundColor(.red)
                     VStack {
-                        Text("Game Over")
+                        Text(NSLocalizedString("Game Over", comment: ""))
                             .foregroundColor(.white)
                             .font(.headline)
                             .fontWeight(.black)
-                        Text("You scored \(gameController.score * timeRemaining)")
-                        Button("Play again") {
+                        Text(NSLocalizedString("You scored ", comment: "") + String(gameController.score * timeRemaining))
+                        Button(NSLocalizedString("Play again", comment: "")) {
                             gameController.gameOver = false
                             timeRemaining = 580/gameController.difficulty
                             isActive = true

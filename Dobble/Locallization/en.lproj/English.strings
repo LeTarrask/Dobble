@@ -1,7 +1,22 @@
 /* 
-  File.strings
+  English.strings
   Dobble
 
   Created by Alex Luna on 09/03/2021.
   
 */
+
+// SinglePlayerView
+"Game Over" = "Game Over";
+"Play again" = "Play again";
+"You scored " = "You scored " ;
+"Score: " = "Score: ";
+"Time left: " = "Time left: ";
+
+// MultiplayerView
+"Player 1 wins" = "Player 1 wins";
+"Player 2 wins" = "Player 2 wins";
+
+// Settings View
+"Multiplayer Mode" = "Multiplayer Mode";
+"Difficulty Level: " = "Difficulty Level: ";

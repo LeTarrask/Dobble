@@ -16,10 +16,10 @@ struct SettingsView: View {
         Form {
             Section {
                 Toggle(isOn: $gameController.multiplayer, label: {
-                    Text("Multiplayer Mode")
+                    Text(NSLocalizedString("Multiplayer Mode", comment: ""))
                 })
                 Stepper(value: $gameController.difficulty, in: 1...5) {
-                    Text("Difficulty Level: \(gameController.difficulty)")
+                    Text(NSLocalizedString("Difficulty Level: ", comment: "") + String(gameController.difficulty))
                 }
             }
         }

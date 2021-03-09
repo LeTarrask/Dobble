@@ -14,14 +14,14 @@ struct MultiplayerView: View {
         ZStack {
             VStack {
                 HStack {
-                    Text("Score: \(String(describing: gameController.score))")
+                    Text(NSLocalizedString("Score: ", comment: "") + String(describing: gameController.score))
                     Spacer()
                 }.padding(.horizontal)
                 CardView(chosen: gameController.showingCards[0], gameController: gameController)
                 Spacer()
                 VStack {
                     HStack {
-                        Text("Score: \(String(describing: gameController.scoreTwo))")
+                        Text(NSLocalizedString("Score: ", comment: "") + String(describing: gameController.scoreTwo))
                         Spacer()
                     }.padding(.horizontal)
                     CardView(chosen: gameController.showingCards[1], gameController: gameController)
@@ -34,14 +34,14 @@ struct MultiplayerView: View {
                         .frame(width: 180, height: 180)
                         .foregroundColor(.red)
                     VStack {
-                        Text("Game Over")
+                        Text(NSLocalizedString("Game Over", comment: ""))
                             .foregroundColor(.white)
                             .font(.headline)
                             .fontWeight(.black)
                         if gameController.score > gameController.scoreTwo {
-                            Text("Player 1 wins")
+                            Text(NSLocalizedString("Player 1 wins", comment: ""))
                         } else {
-                            Text("Player 2 wins")
+                            Text(NSLocalizedString("Player 2 wins", comment: ""))
                         }
                         Button("Play again") {
                             gameController.gameOver.toggle()
