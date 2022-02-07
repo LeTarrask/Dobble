@@ -8,7 +8,7 @@
 import SwiftUI
 import SpriteKit
 
-struct GameView: View {
+struct GameView: View {    
     var scene: SKScene {
         let scene = GameScene()
         scene.scaleMode = .resizeFill
@@ -29,6 +29,8 @@ struct GameView_Previews: PreviewProvider {
 }
 
 class GameScene: SKScene {
+    @EnvironmentObject var controller: GameController
+    
     override func didMove(to view: SKView) {
         physicsBody = SKPhysicsBody(edgeLoopFrom: frame)
     }
