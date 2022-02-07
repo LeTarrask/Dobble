@@ -12,6 +12,7 @@ struct DobbleApp: App {
     var body: some Scene {
         WindowGroup {
             SinglePlayerView()
+                .environmentObject(GameController())
         }
     }
 }

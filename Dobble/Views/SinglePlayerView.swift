@@ -8,14 +8,14 @@
 import SwiftUI
 
 struct SinglePlayerView: View {
-    @ObservedObject var gameController = GameController()
+    @EnvironmentObject var gameController: GameController
         
     @State private var timeRemaining = 300
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     @State private var isActive = true
     
     init() {
-        timeRemaining = timeRemaining/gameController.difficulty
+        
     }
     
     var body: some View {
@@ -29,7 +29,7 @@ struct SinglePlayerView: View {
                 .padding(.horizontal)
                 VStack {
                     ForEach(gameController.showingCards, id: \.self) { card in
-                        CardView(card: card, gameController: gameController)
+                        CardView(card: card)
                     }
                 }
             }

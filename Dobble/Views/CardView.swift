@@ -10,7 +10,7 @@ import SwiftUI
 struct CardView: View {
     let card: Card
     
-    @ObservedObject var gameController: GameController
+    @EnvironmentObject var gameController: GameController
 
     var body: some View {
         ZStack {

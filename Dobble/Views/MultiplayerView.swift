@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct MultiplayerView: View {
-    @ObservedObject var gameController = GameController()
+    @EnvironmentObject var gameController: GameController
         
     var body: some View {
         ZStack {
@@ -17,14 +17,14 @@ struct MultiplayerView: View {
                     Text(NSLocalizedString("Score: ", comment: "") + String(describing: gameController.score))
                     Spacer()
                 }.padding(.horizontal)
-                CardView(card: gameController.showingCards[0], gameController: gameController)
+                CardView(card: gameController.showingCards[0])
                 Spacer()
                 VStack {
                     HStack {
                         Text(NSLocalizedString("Score: ", comment: "") + String(describing: gameController.scoreTwo))
                         Spacer()
                     }.padding(.horizontal)
-                    CardView(card: gameController.showingCards[1], gameController: gameController)
+                    CardView(card: gameController.showingCards[1])
                 }
                 .rotationEffect(.degrees(180))
             }

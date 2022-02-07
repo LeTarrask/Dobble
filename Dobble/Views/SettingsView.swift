@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SettingsView: View {
-    @ObservedObject var gameController = GameController()
+    @EnvironmentObject var gameController: GameController
         
     @State private var difficulty: Int = 1
     
