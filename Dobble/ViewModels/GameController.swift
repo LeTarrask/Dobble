@@ -18,7 +18,11 @@ class GameController: ObservableObject {
     
     @Published var showingCards: [Card] = [Card]()
     
-    @Published var multiplayer: Bool = false
+    @Published var multiplayer: Bool = false {
+        didSet {
+            resetGame()
+        }
+    }
     
     @Published var difficulty: Int = 1
     
@@ -28,12 +32,16 @@ class GameController: ObservableObject {
     @Published var gameOver: Bool = false {
         didSet {
             if gameOver == false {
-                cards = []
-                score = 0
-                scoreTwo = 0
-                drawDeck()
+                resetGame()
             }
         }
+    }
+    
+    func resetGame() {
+        cards = []
+        score = 0
+        scoreTwo = 0
+        drawDeck()
     }
     
     func pick(value: String, player: Int) {

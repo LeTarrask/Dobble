@@ -14,6 +14,8 @@
 		7913CAD625FA4DBA00E371FA /* InterstitialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7913CAD225FA4DBA00E371FA /* InterstitialView.swift */; };
 		7913CAD725FA4DBA00E371FA /* AdMob BannerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7913CAD325FA4DBA00E371FA /* AdMob BannerVC.swift */; };
 		79A97ACD27B164BD000AB23C /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A97ACC27B164BD000AB23C /* GameView.swift */; };
+		79A97AD127B18819000AB23C /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A97AD027B18819000AB23C /* MainView.swift */; };
+		79A97AD327B18859000AB23C /* GameOverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A97AD227B18859000AB23C /* GameOverView.swift */; };
 		79BC220225D564510088C488 /* MultiplayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BC220125D564510088C488 /* MultiplayerView.swift */; };
 		79BC220725D564780088C488 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BC220625D564780088C488 /* CardView.swift */; };
 		79BC220C25D5648D0088C488 /* IconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BC220B25D5648D0088C488 /* IconView.swift */; };
@@ -61,6 +63,8 @@
 		7913CAD225FA4DBA00E371FA /* InterstitialView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterstitialView.swift; sourceTree = "<group>"; };
 		7913CAD325FA4DBA00E371FA /* AdMob BannerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AdMob BannerVC.swift"; sourceTree = "<group>"; };
 		79A97ACC27B164BD000AB23C /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
+		79A97AD027B18819000AB23C /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		79A97AD227B18859000AB23C /* GameOverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverView.swift; sourceTree = "<group>"; };
 		79BC220125D564510088C488 /* MultiplayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiplayerView.swift; sourceTree = "<group>"; };
 		79BC220625D564780088C488 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		79BC220B25D5648D0088C488 /* IconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconView.swift; sourceTree = "<group>"; };
@@ -170,6 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				79FA5B6025D166380057FC51 /* DobbleApp.swift */,
+				79A97AD027B18819000AB23C /* MainView.swift */,
 				79FA5B6925D1663E0057FC51 /* Info.plist */,
 				7913CACF25FA4DBA00E371FA /* AdMob */,
 				79FA5B8E25D1664B0057FC51 /* Model */,
@@ -225,6 +230,7 @@
 				79BC220125D564510088C488 /* MultiplayerView.swift */,
 				79BC220625D564780088C488 /* CardView.swift */,
 				79BC220B25D5648D0088C488 /* IconView.swift */,
+				79A97AD227B18859000AB23C /* GameOverView.swift */,
 				79BC221D25D578290088C488 /* SettingsView.swift */,
 				79A97ACC27B164BD000AB23C /* GameView.swift */,
 			);
@@ -503,10 +509,12 @@
 				79BC220225D564510088C488 /* MultiplayerView.swift in Sources */,
 				79FA5B6325D166380057FC51 /* SinglePlayerView.swift in Sources */,
 				79A97ACD27B164BD000AB23C /* GameView.swift in Sources */,
+				79A97AD327B18859000AB23C /* GameOverView.swift in Sources */,
 				79BC220C25D5648D0088C488 /* IconView.swift in Sources */,
 				7913CAD625FA4DBA00E371FA /* InterstitialView.swift in Sources */,
 				7913CAD525FA4DBA00E371FA /* AdMob InterstitialVC.swift in Sources */,
 				79FA5B6125D166380057FC51 /* DobbleApp.swift in Sources */,
+				79A97AD127B18819000AB23C /* MainView.swift in Sources */,
 				79FA5BB725D1923C0057FC51 /* GameController.swift in Sources */,
 				79BC221E25D578290088C488 /* SettingsView.swift in Sources */,
 				7913CAD425FA4DBA00E371FA /* BannerView.swift in Sources */,
