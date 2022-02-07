@@ -15,24 +15,24 @@ struct MultiplayerView: View {
             VStack {
                 VStack {
                     HStack {
-                        Text(NSLocalizedString("Score: ", comment: "") + String(describing: gameController.score))
+                        Text(NSLocalizedString("Score One: ", comment: "") + String(describing: gameController.score))
                             .font(.largeTitle)
                             .fontWeight(.black)
                         Spacer()
                     }.padding(.horizontal)
-                    CardView(card: gameController.showingCards[0])
+                    CardView(card: gameController.showingCards[0], player: 1)
                 }.rotationEffect(.degrees(180))
                 
                 Spacer()
                 
                 VStack {
                     HStack {
-                        Text(NSLocalizedString("Score: ", comment: "") + String(describing: gameController.scoreTwo))
+                        Text(NSLocalizedString("Score Two: ", comment: "") + String(describing: gameController.scoreTwo))
                             .font(.largeTitle)
                             .fontWeight(.black)
                         Spacer()
                     }.padding(.horizontal)
-                    CardView(card: gameController.showingCards[1])
+                    CardView(card: gameController.showingCards[1], player: 2)
                 }
             }
             if gameController.gameOver {

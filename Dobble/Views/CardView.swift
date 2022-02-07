@@ -10,6 +10,8 @@ import SwiftUI
 struct CardView: View {
     let card: Card
     
+    let player: Int
+    
     @EnvironmentObject var gameController: GameController
 
     var body: some View {
@@ -24,7 +26,7 @@ struct CardView: View {
                         ForEach(card.images[0...3], id: \.self) { image in
                             IconView(image: image)
                                 .onTapGesture {
-                                    gameController.pick(value: image, chosen: card)
+                                    gameController.pick(value: image, player: player)
                                 }
                         }
                     }
@@ -32,7 +34,7 @@ struct CardView: View {
                         ForEach(card.images[4...7], id: \.self) { image in
                             IconView(image: image)
                                 .onTapGesture {
-                                    gameController.pick(value: image, chosen: card)
+                                    gameController.pick(value: image, player: player)
                                 }
                         }
                     }
@@ -47,6 +49,6 @@ struct Previews_CardView_Previews: PreviewProvider {
     static var previews: some View {
         let controller = GameController()
         let card = controller.showingCards[0]
-        return CardView(card: card)
+        return CardView(card: card, player: 1)
     }
 }

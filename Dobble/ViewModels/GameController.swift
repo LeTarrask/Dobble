@@ -36,14 +36,14 @@ class GameController: ObservableObject {
         }
     }
     
-    func pick(value: String, chosen: Card) {
+    func pick(value: String, player: Int) {
         let card1 = showingCards[0]
         let card2 = showingCards[1]
         
         // check if touch is matched value
         if card1.images.contains(value) && card2.images.contains(value) {
             if multiplayer {
-                if chosen == card1 {
+                if player == 1 {
                     score += 1
                 } else {
                     scoreTwo += 1
@@ -63,7 +63,7 @@ class GameController: ObservableObject {
         } else {
             // what happens if player/s touch wrong image
             if multiplayer {
-                if chosen == card1 {
+                if player == 1 {
                     score -= 1
                 } else {
                     scoreTwo -= 1
