@@ -24,7 +24,6 @@
 		79FA5B6825D1663E0057FC51 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79FA5B6725D1663E0057FC51 /* Preview Assets.xcassets */; };
 		79FA5B7325D1663E0057FC51 /* DobbleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FA5B7225D1663E0057FC51 /* DobbleTests.swift */; };
 		79FA5B7E25D1663E0057FC51 /* DobbleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FA5B7D25D1663E0057FC51 /* DobbleUITests.swift */; };
-		79FA5B9625D169900057FC51 /* CardGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FA5B9125D166A00057FC51 /* CardGenerator.swift */; };
 		79FA5B9E25D1729A0057FC51 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FA5B9D25D1729A0057FC51 /* Card.swift */; };
 		79FA5BA525D17A4E0057FC51 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FA5B9D25D1729A0057FC51 /* Card.swift */; };
 		79FA5BAA25D17DC70057FC51 /* extension+Array+similarElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FA5BA925D17DC70057FC51 /* extension+Array+similarElements.swift */; };
@@ -76,7 +75,6 @@
 		79FA5B7925D1663E0057FC51 /* DobbleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DobbleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		79FA5B7D25D1663E0057FC51 /* DobbleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DobbleUITests.swift; sourceTree = "<group>"; };
 		79FA5B7F25D1663E0057FC51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		79FA5B9125D166A00057FC51 /* CardGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardGenerator.swift; sourceTree = "<group>"; };
 		79FA5B9D25D1729A0057FC51 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		79FA5BA925D17DC70057FC51 /* extension+Array+similarElements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "extension+Array+similarElements.swift"; path = "Dobble/ViewModels/extension+Array+similarElements.swift"; sourceTree = SOURCE_ROOT; };
 		79FA5BB125D190B30057FC51 /* Decks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Decks.swift; sourceTree = "<group>"; };
@@ -234,7 +232,6 @@
 			isa = PBXGroup;
 			children = (
 				79FA5BB625D1923C0057FC51 /* GameController.swift */,
-				79FA5B9125D166A00057FC51 /* CardGenerator.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -523,7 +520,6 @@
 				79BC222E25D5F27D0088C488 /* Decks.swift in Sources */,
 				79FA5BB825D1923C0057FC51 /* GameController.swift in Sources */,
 				79FA5BA525D17A4E0057FC51 /* Card.swift in Sources */,
-				79FA5B9625D169900057FC51 /* CardGenerator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
