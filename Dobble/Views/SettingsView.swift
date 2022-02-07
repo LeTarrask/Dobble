@@ -27,6 +27,8 @@ struct SettingsView: View {
                 }
             }
             
+            Banner()
+            
             HStack {
                 Button("Cancel") {
                     gameController.resetGame()
