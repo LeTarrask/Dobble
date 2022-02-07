@@ -14,10 +14,6 @@ struct SinglePlayerView: View {
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     @State private var isActive = true
     
-    init() {
-        
-    }
-    
     var body: some View {
         ZStack {
             VStack {
