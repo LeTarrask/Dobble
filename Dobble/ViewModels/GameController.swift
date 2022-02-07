@@ -8,7 +8,14 @@
 import Foundation
 
 class GameController: ObservableObject {
-    var cards: [Card] = [Card]()
+    var cards: [Card] = [Card]() {
+        didSet {
+            if cards.count == 1 {
+                gameOver = true
+            }
+        }
+    }
+    
     @Published var showingCards: [Card] = [Card]()
     
     @Published var multiplayer: Bool = false
