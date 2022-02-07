@@ -13,24 +13,28 @@ struct CardView: View {
     @EnvironmentObject var gameController: GameController
 
     var body: some View {
-        ZStack {
-            RoundedRectangle(cornerRadius: 25.0)
-                .frame(width: 250, height: 150)
-            VStack {
-                HStack {
-                    ForEach(card.images[0...3], id: \.self) { image in
-                        IconView(image: image)
-                            .onTapGesture {
-                                gameController.pick(value: image, chosen: card)
-                            }
+        GeometryReader { geo in
+            ZStack {
+                RoundedRectangle(cornerRadius: 25.0)
+                    .padding()
+                    .frame(width: geo.size.width, height: geo.size.height)
+                
+                VStack {
+                    HStack {
+                        ForEach(card.images[0...3], id: \.self) { image in
+                            IconView(image: image)
+                                .onTapGesture {
+                                    gameController.pick(value: image, chosen: card)
+                                }
+                        }
                     }
-                }
-                HStack {
-                    ForEach(card.images[4...7], id: \.self) { image in
-                        IconView(image: image)
-                            .onTapGesture {
-                                gameController.pick(value: image, chosen: card)
-                            }
+                    HStack {
+                        ForEach(card.images[4...7], id: \.self) { image in
+                            IconView(image: image)
+                                .onTapGesture {
+                                    gameController.pick(value: image, chosen: card)
+                                }
+                        }
                     }
                 }
             }
@@ -38,3 +42,11 @@ struct CardView: View {
     }
 }
 
+
+struct Previews_CardView_Previews: PreviewProvider {
+    static var previews: some View {
+        let controller = GameController()
+        let card = controller.showingCards[0]
+        return CardView(card: card)
+    }
+}

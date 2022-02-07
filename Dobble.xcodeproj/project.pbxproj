@@ -223,9 +223,9 @@
 			children = (
 				79FA5B6225D166380057FC51 /* SinglePlayerView.swift */,
 				79BC220125D564510088C488 /* MultiplayerView.swift */,
-				79BC221D25D578290088C488 /* SettingsView.swift */,
 				79BC220625D564780088C488 /* CardView.swift */,
 				79BC220B25D5648D0088C488 /* IconView.swift */,
+				79BC221D25D578290088C488 /* SettingsView.swift */,
 				79A97ACC27B164BD000AB23C /* GameView.swift */,
 			);
 			path = Views;
