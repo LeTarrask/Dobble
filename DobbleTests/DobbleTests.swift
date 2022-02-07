@@ -10,44 +10,47 @@ import XCTest
 
 class DobbleTests: XCTestCase {
     func testCardGenerator() throws {
-        // Generates decks of cards
+        // Generates decks of cards, the game needs 57 cards
         let cardGen = CardGenerator()
         
         // checks if deck has correct size
-        XCTAssert(cardGen.deck.count == 57, "deck possui 57 cartas")
+        XCTAssert(cardGen.deck.count == 57, "deck has 57 cards")
     }
     
-    func testCardMatches() throws {
+    func testRandomCardHasMatch() throws {
         // Generates decks of cards
         let cardGen = CardGenerator()
         
-        // checks if any 2 random cards have one single similar element
+        // checks if any random pair of cards have one single similar element in any other random card
         let card1 = cardGen.deck.randomElement()!.images
         let card2 = cardGen.deck.randomElement()!.images
         let similarElements = card1.similarElements(as: card2)
         XCTAssert(similarElements.count == 1)
     }
     
-    func testGameController() throws {
+    func testGameInicialization() throws {
         let gm = GameController()
         
+        // Initial game shows 2 cards, and deck has 55 cards
         XCTAssert(gm.showingCards.count == 2)
-        XCTAssert(gm.cards.count == 57)
+        XCTAssert(gm.cards.count == 55)
         
+        // Game starts
         XCTAssert(gm.gameOver == false)
+    }
+    
+    func testGameOver() throws {
+        let gm = GameController()
         
-        print(gm.cards.count)
-        
+        // Removes 28 pairs of cards
         for _ in 1..<28 {
-            gm.cards.removeFirst()
-            gm.cards.removeLast()
+            gm.getTwoCards()
         }
-        
-        print(gm.cards.count)
 
-        gm.cards.removeLast()
-        gm.cards.removeFirst()
-        
+        // There's a single card left
         XCTAssert(gm.cards.count == 1)
+        
+        // Game ends
+        XCTAssert(gm.gameOver == true)
     }
 }
