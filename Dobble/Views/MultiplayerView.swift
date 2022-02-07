@@ -13,20 +13,27 @@ struct MultiplayerView: View {
     var body: some View {
         ZStack {
             VStack {
-                HStack {
-                    Text(NSLocalizedString("Score: ", comment: "") + String(describing: gameController.score))
-                    Spacer()
-                }.padding(.horizontal)
-                CardView(card: gameController.showingCards[0])
+                VStack {
+                    HStack {
+                        Text(NSLocalizedString("Score: ", comment: "") + String(describing: gameController.score))
+                            .font(.largeTitle)
+                            .fontWeight(.black)
+                        Spacer()
+                    }.padding(.horizontal)
+                    CardView(card: gameController.showingCards[0])
+                }.rotationEffect(.degrees(180))
+                
                 Spacer()
+                
                 VStack {
                     HStack {
                         Text(NSLocalizedString("Score: ", comment: "") + String(describing: gameController.scoreTwo))
+                            .font(.largeTitle)
+                            .fontWeight(.black)
                         Spacer()
                     }.padding(.horizontal)
                     CardView(card: gameController.showingCards[1])
                 }
-                .rotationEffect(.degrees(180))
             }
             if gameController.gameOver {
                 ZStack {
