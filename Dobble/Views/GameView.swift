@@ -8,6 +8,7 @@
 import SwiftUI
 import SpriteKit
 
+// This intent of recreating the game in SpriteKit is a developers dream, not for version 1.0
 struct GameView: View {    
     var scene: SKScene {
         let scene = GameScene()
