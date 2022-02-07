@@ -11,26 +11,41 @@ struct SettingsView: View {
     @Environment(\.dismiss) var dismiss
     
     @EnvironmentObject var gameController: GameController
-        
+    
     @State private var difficulty: Int = 1
     
     var body: some View {
-        Form {
-            Section {
-                Toggle(isOn: $gameController.multiplayer, label: {
-                    Text(NSLocalizedString("Multiplayer Mode", comment: ""))
-                })
-                Stepper(value: $gameController.difficulty, in: 1...5) {
-                    Text(NSLocalizedString("Difficulty Level: ", comment: "") + String(gameController.difficulty))
+        VStack {
+            Form {
+                Section("Game Settings") {
+                    Toggle(isOn: $gameController.multiplayer, label: {
+                        Text(NSLocalizedString("Multiplayer Mode", comment: ""))
+                    })
+                    Stepper(value: $gameController.difficulty, in: 1...5) {
+                        Text(NSLocalizedString("Difficulty Level: ", comment: "") + String(gameController.difficulty))
+                    }
                 }
             }
             
-            Button("Press to dismiss") {
-                        dismiss()
-                    }
-                    .font(.title)
-                    .padding()
-                    .background(Color.black)
+            HStack {
+                Button("Cancel") {
+                    gameController.resetGame()
+                    dismiss()
+                }
+                .font(.title)
+                .padding()
+                .background(Color.gray)
+                
+                Button("Apply changes") {
+                    gameController.resetGame()
+                    dismiss()
+                }
+                .font(.title)
+                .padding()
+                .background(Color.black)
+            }
+            
+            Spacer()
         }
     }
 }
