@@ -19,8 +19,12 @@ struct SinglePlayerView: View {
             VStack {
                 HStack {
                     Text(NSLocalizedString("Score: ", comment: "") + String(gameController.score))
+                        .font(.largeTitle)
+                        .fontWeight(.black)
                     Spacer()
                     Text(NSLocalizedString("Time left: ", comment: "") + String(timeRemaining))
+                        .font(.largeTitle)
+                        .fontWeight(.black)
                 }
                 .padding(.horizontal)
                 VStack {
