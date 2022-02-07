@@ -21,6 +21,7 @@ struct MainView: View {
             }
             
             HStack {
+                Banner()
                 Spacer()
                 Button(action: {
                     showingSheet.toggle()

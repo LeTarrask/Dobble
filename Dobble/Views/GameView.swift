@@ -25,7 +25,6 @@ struct GameView: View {
 struct GameView_Previews: PreviewProvider {
     static var previews: some View {
         GameView()
-            .previewDevice("iPad Pro (12.9-inch) (5th generation)")
     }
 }
 
