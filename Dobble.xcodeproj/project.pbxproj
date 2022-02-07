@@ -13,6 +13,7 @@
 		7913CAD525FA4DBA00E371FA /* AdMob InterstitialVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7913CAD125FA4DBA00E371FA /* AdMob InterstitialVC.swift */; };
 		7913CAD625FA4DBA00E371FA /* InterstitialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7913CAD225FA4DBA00E371FA /* InterstitialView.swift */; };
 		7913CAD725FA4DBA00E371FA /* AdMob BannerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7913CAD325FA4DBA00E371FA /* AdMob BannerVC.swift */; };
+		79A97ACD27B164BD000AB23C /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A97ACC27B164BD000AB23C /* GameView.swift */; };
 		79BC220225D564510088C488 /* MultiplayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BC220125D564510088C488 /* MultiplayerView.swift */; };
 		79BC220725D564780088C488 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BC220625D564780088C488 /* CardView.swift */; };
 		79BC220C25D5648D0088C488 /* IconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BC220B25D5648D0088C488 /* IconView.swift */; };
@@ -59,6 +60,7 @@
 		7913CAD125FA4DBA00E371FA /* AdMob InterstitialVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AdMob InterstitialVC.swift"; sourceTree = "<group>"; };
 		7913CAD225FA4DBA00E371FA /* InterstitialView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterstitialView.swift; sourceTree = "<group>"; };
 		7913CAD325FA4DBA00E371FA /* AdMob BannerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AdMob BannerVC.swift"; sourceTree = "<group>"; };
+		79A97ACC27B164BD000AB23C /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 		79BC220125D564510088C488 /* MultiplayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiplayerView.swift; sourceTree = "<group>"; };
 		79BC220625D564780088C488 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		79BC220B25D5648D0088C488 /* IconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconView.swift; sourceTree = "<group>"; };
@@ -224,6 +226,7 @@
 				79BC221D25D578290088C488 /* SettingsView.swift */,
 				79BC220625D564780088C488 /* CardView.swift */,
 				79BC220B25D5648D0088C488 /* IconView.swift */,
+				79A97ACC27B164BD000AB23C /* GameView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -499,6 +502,7 @@
 				79FA5BAA25D17DC70057FC51 /* extension+Array+similarElements.swift in Sources */,
 				79BC220225D564510088C488 /* MultiplayerView.swift in Sources */,
 				79FA5B6325D166380057FC51 /* SinglePlayerView.swift in Sources */,
+				79A97ACD27B164BD000AB23C /* GameView.swift in Sources */,
 				79BC220C25D5648D0088C488 /* IconView.swift in Sources */,
 				7913CAD625FA4DBA00E371FA /* InterstitialView.swift in Sources */,
 				7913CAD525FA4DBA00E371FA /* AdMob InterstitialVC.swift in Sources */,
