@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct SettingsView: View {
+    @Environment(\.dismiss) var dismiss
+    
     @EnvironmentObject var gameController: GameController
         
     @State private var difficulty: Int = 1
@@ -22,6 +24,13 @@ struct SettingsView: View {
                     Text(NSLocalizedString("Difficulty Level: ", comment: "") + String(gameController.difficulty))
                 }
             }
+            
+            Button("Press to dismiss") {
+                        dismiss()
+                    }
+                    .font(.title)
+                    .padding()
+                    .background(Color.black)
         }
     }
 }

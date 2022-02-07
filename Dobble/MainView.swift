@@ -10,6 +10,8 @@ import SwiftUI
 struct MainView: View {
     @EnvironmentObject var gameController: GameController
     
+    @State private var showingSheet = false
+    
     var body: some View {
         VStack {
             if !gameController.multiplayer {
@@ -21,13 +23,16 @@ struct MainView: View {
             HStack {
                 Spacer()
                 Button(action: {
-                    gameController.multiplayer.toggle()
+                    showingSheet.toggle()
                 }, label: {
                     Image(systemName: "slider.horizontal.3")
                         .font(.title)
                 })
             }
             .padding(10)
+        }
+        .sheet(isPresented: $showingSheet) {
+            SettingsView()
         }
     }
 }
