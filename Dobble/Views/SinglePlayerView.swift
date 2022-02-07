@@ -29,7 +29,7 @@ struct SinglePlayerView: View {
                 .padding(.horizontal)
                 VStack {
                     ForEach(gameController.showingCards, id: \.self) { card in
-                        CardView(chosen: card, gameController: gameController)
+                        CardView(card: card, gameController: gameController)
                     }
                 }
             }

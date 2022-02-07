@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CardView: View {
-    let chosen: Card
+    let card: Card
     
     @ObservedObject var gameController: GameController
 
@@ -18,18 +18,18 @@ struct CardView: View {
                 .frame(width: 250, height: 150)
             VStack {
                 HStack {
-                    ForEach(chosen.images[0...3], id: \.self) { image in
+                    ForEach(card.images[0...3], id: \.self) { image in
                         IconView(image: image)
                             .onTapGesture {
-                                gameController.pick(value: image, chosen: chosen)
+                                gameController.pick(value: image, chosen: card)
                             }
                     }
                 }
                 HStack {
-                    ForEach(chosen.images[4...7], id: \.self) { image in
+                    ForEach(card.images[4...7], id: \.self) { image in
                         IconView(image: image)
                             .onTapGesture {
-                                gameController.pick(value: image, chosen: chosen)
+                                gameController.pick(value: image, chosen: card)
                             }
                     }
                 }

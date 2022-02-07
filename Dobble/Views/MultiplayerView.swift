@@ -17,14 +17,14 @@ struct MultiplayerView: View {
                     Text(NSLocalizedString("Score: ", comment: "") + String(describing: gameController.score))
                     Spacer()
                 }.padding(.horizontal)
-                CardView(chosen: gameController.showingCards[0], gameController: gameController)
+                CardView(card: gameController.showingCards[0], gameController: gameController)
                 Spacer()
                 VStack {
                     HStack {
                         Text(NSLocalizedString("Score: ", comment: "") + String(describing: gameController.scoreTwo))
                         Spacer()
                     }.padding(.horizontal)
-                    CardView(chosen: gameController.showingCards[1], gameController: gameController)
+                    CardView(card: gameController.showingCards[1], gameController: gameController)
                 }
                 .rotationEffect(.degrees(180))
             }
