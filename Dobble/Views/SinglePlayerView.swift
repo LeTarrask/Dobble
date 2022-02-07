@@ -72,5 +72,6 @@ struct SinglePlayerView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         SinglePlayerView()
+            .environmentObject(GameController())
     }
 }

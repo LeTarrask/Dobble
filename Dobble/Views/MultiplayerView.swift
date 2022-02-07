@@ -57,5 +57,6 @@ struct MultiplayerView: View {
 struct MultiplayerView_Previews: PreviewProvider {
     static var previews: some View {
         MultiplayerView()
+            .environmentObject(GameController())
     }
 }
