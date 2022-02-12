@@ -31,20 +31,11 @@ struct SettingsView: View {
             
             HStack {
                 Button("Cancel") {
-                    gameController.resetGame()
                     dismiss()
                 }
                 .font(.title)
                 .padding()
-                .background(Color.gray)
-                
-                Button("Apply changes") {
-                    gameController.resetGame()
-                    dismiss()
-                }
-                .font(.title)
-                .padding()
-                .background(Color.black)
+                .buttonStyle(.borderedProminent)
             }
             
             Spacer()
