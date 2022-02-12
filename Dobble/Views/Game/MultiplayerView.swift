@@ -36,13 +36,13 @@ struct MultiplayerView: View {
             if gameController.gameOver {
                 ZStack {
                     RoundedRectangle(cornerRadius: 25)
-                        .frame(width: 180, height: 180)
+                        .frame(width: 300, height: 300)
                         .foregroundColor(.red)
                     VStack {
-                        Text(NSLocalizedString("Game Over", comment: ""))
-                            .foregroundColor(.white)
-                            .font(.headline)
-                            .fontWeight(.black)
+                        Image("gameover")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 300)
                         if gameController.score > gameController.scoreTwo {
                             Text(NSLocalizedString("Player 1 wins", comment: ""))
                         } else {

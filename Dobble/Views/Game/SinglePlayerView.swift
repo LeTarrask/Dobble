@@ -39,13 +39,13 @@ struct SinglePlayerView: View {
             if gameController.gameOver {
                 ZStack {
                     RoundedRectangle(cornerRadius: 25)
-                        .frame(width: 180, height: 180)
+                        .frame(width: 300, height: 300)
                         .foregroundColor(.red)
                     VStack {
-                        Text(NSLocalizedString("Game Over", comment: ""))
-                            .foregroundColor(.white)
-                            .font(.headline)
-                            .fontWeight(.black)
+                        Image("gameover")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 300)
                         Text(NSLocalizedString("You scored ", comment: "") + String(gameController.score * timeRemaining))
                         Button(NSLocalizedString("Play again", comment: "")) {
                             gameController.gameOver = false
@@ -78,7 +78,9 @@ struct SinglePlayerView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        SinglePlayerView()
-            .environmentObject(GameController())
+        let game = GameController()
+        game.gameOver = true
+        return SinglePlayerView()
+            .environmentObject(game)
     }
 }
