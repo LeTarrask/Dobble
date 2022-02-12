@@ -17,7 +17,7 @@ struct IconView: View {
             Image(image)
                 .resizable()
                 .scaledToFit()
-                .frame(width: (geo.size.width*Double.random(in: 0.5...1.0)))
+//                .frame(width: (geo.size.width*Double.random(in: 0.5...1.0)))
                 .rotationEffect(Angle(degrees: Double.random(in: -90...90)))
         }
             

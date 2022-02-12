@@ -47,6 +47,7 @@ struct MainView: View {
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
         MainView()
+            .previewDevice("iPad Pro (12.9-inch) (5th generation)")
             .environmentObject(GameController())
     }
 }

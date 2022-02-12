@@ -62,6 +62,7 @@ struct MultiplayerView: View {
 struct MultiplayerView_Previews: PreviewProvider {
     static var previews: some View {
         MultiplayerView()
+            .previewDevice("iPad Pro (12.9-inch) (5th generation)")
             .environmentObject(GameController())
     }
 }
