@@ -21,9 +21,9 @@ struct SettingsView: View {
                     Toggle(isOn: $gameController.multiplayer, label: {
                         Text(NSLocalizedString("Multiplayer Mode", comment: ""))
                     })
-                    Stepper(value: $gameController.difficulty, in: 1...5) {
-                        Text(NSLocalizedString("Difficulty Level: ", comment: "") + String(gameController.difficulty))
-                    }
+//                    Stepper(value: $gameController.difficulty, in: 1...5) {
+//                        Text(NSLocalizedString("Difficulty Level: ", comment: "") + String(gameController.difficulty))
+//                    }
                 }
             }
             
