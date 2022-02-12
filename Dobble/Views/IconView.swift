@@ -11,7 +11,11 @@ struct IconView: View {
     let image: String
     
     var body: some View {
-        Text(image)
-            .font(.system(size: CGFloat.random(in: 20..<60)))
+        // Text(image) - to use when deck is emojis
+        // .font(.system(size: CGFloat.random(in: 20..<60)))
+        Image(image)
+            .resizable()
+            .scaledToFit()
+            
     }
 }

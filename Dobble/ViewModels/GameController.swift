@@ -99,7 +99,7 @@ class GameController: ObservableObject {
     
     func drawDeck() {
         // We can choose any different deck of images here
-        cards = emojiDeck().cards
+        cards = numberDeck().cards
         
         showingCards = []
         
