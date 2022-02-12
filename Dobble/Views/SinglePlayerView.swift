@@ -23,7 +23,7 @@ struct SinglePlayerView: View {
                         .fontWeight(.black)
                     Spacer()
                     Text(NSLocalizedString("Time left: ", comment: "") + String(timeRemaining))
-                        .font(.largeTitle)
+                        .font(.title3)
                         .fontWeight(.black)
                 }
                 .padding(.horizontal)
