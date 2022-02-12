@@ -146,6 +146,17 @@
 			path = AdMob;
 			sourceTree = "<group>";
 		};
+		799675A827B808A50018FA0A /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				79FA5B6225D166380057FC51 /* SinglePlayerView.swift */,
+				79BC220125D564510088C488 /* MultiplayerView.swift */,
+				79BC220625D564780088C488 /* CardView.swift */,
+				79BC220B25D5648D0088C488 /* IconView.swift */,
+			);
+			path = Game;
+			sourceTree = "<group>";
+		};
 		79FA5B5425D166380057FC51 = {
 			isa = PBXGroup;
 			children = (
@@ -172,7 +183,6 @@
 			isa = PBXGroup;
 			children = (
 				79FA5B6025D166380057FC51 /* DobbleApp.swift */,
-				79A97AD027B18819000AB23C /* MainView.swift */,
 				79FA5B6925D1663E0057FC51 /* Info.plist */,
 				7913CACF25FA4DBA00E371FA /* AdMob */,
 				79FA5B8E25D1664B0057FC51 /* Model */,
@@ -224,10 +234,8 @@
 		79FA5B8F25D166520057FC51 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				79FA5B6225D166380057FC51 /* SinglePlayerView.swift */,
-				79BC220125D564510088C488 /* MultiplayerView.swift */,
-				79BC220625D564780088C488 /* CardView.swift */,
-				79BC220B25D5648D0088C488 /* IconView.swift */,
+				79A97AD027B18819000AB23C /* MainView.swift */,
+				799675A827B808A50018FA0A /* Game */,
 				79BC221D25D578290088C488 /* SettingsView.swift */,
 				79A97ACC27B164BD000AB23C /* GameView.swift */,
 			);
