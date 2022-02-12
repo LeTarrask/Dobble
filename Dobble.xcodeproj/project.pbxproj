@@ -13,7 +13,6 @@
 		7913CAD525FA4DBA00E371FA /* AdMob InterstitialVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7913CAD125FA4DBA00E371FA /* AdMob InterstitialVC.swift */; };
 		7913CAD625FA4DBA00E371FA /* InterstitialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7913CAD225FA4DBA00E371FA /* InterstitialView.swift */; };
 		7913CAD725FA4DBA00E371FA /* AdMob BannerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7913CAD325FA4DBA00E371FA /* AdMob BannerVC.swift */; };
-		7992D6FA27B7E44300A567CF /* KawaiiDeckView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7992D6F927B7E44300A567CF /* KawaiiDeckView.swift */; };
 		79A97ACD27B164BD000AB23C /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A97ACC27B164BD000AB23C /* GameView.swift */; };
 		79A97AD127B18819000AB23C /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A97AD027B18819000AB23C /* MainView.swift */; };
 		79BC220225D564510088C488 /* MultiplayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BC220125D564510088C488 /* MultiplayerView.swift */; };
@@ -62,7 +61,6 @@
 		7913CAD125FA4DBA00E371FA /* AdMob InterstitialVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AdMob InterstitialVC.swift"; sourceTree = "<group>"; };
 		7913CAD225FA4DBA00E371FA /* InterstitialView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterstitialView.swift; sourceTree = "<group>"; };
 		7913CAD325FA4DBA00E371FA /* AdMob BannerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AdMob BannerVC.swift"; sourceTree = "<group>"; };
-		7992D6F927B7E44300A567CF /* KawaiiDeckView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KawaiiDeckView.swift; sourceTree = "<group>"; };
 		79A97ACC27B164BD000AB23C /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 		79A97AD027B18819000AB23C /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		79BC220125D564510088C488 /* MultiplayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiplayerView.swift; sourceTree = "<group>"; };
@@ -227,7 +225,6 @@
 			isa = PBXGroup;
 			children = (
 				79FA5B6225D166380057FC51 /* SinglePlayerView.swift */,
-				7992D6F927B7E44300A567CF /* KawaiiDeckView.swift */,
 				79BC220125D564510088C488 /* MultiplayerView.swift */,
 				79BC220625D564780088C488 /* CardView.swift */,
 				79BC220B25D5648D0088C488 /* IconView.swift */,
@@ -514,7 +511,6 @@
 				7913CAD525FA4DBA00E371FA /* AdMob InterstitialVC.swift in Sources */,
 				79FA5B6125D166380057FC51 /* DobbleApp.swift in Sources */,
 				79A97AD127B18819000AB23C /* MainView.swift in Sources */,
-				7992D6FA27B7E44300A567CF /* KawaiiDeckView.swift in Sources */,
 				79FA5BB725D1923C0057FC51 /* GameController.swift in Sources */,
 				79BC221E25D578290088C488 /* SettingsView.swift in Sources */,
 				7913CAD425FA4DBA00E371FA /* BannerView.swift in Sources */,

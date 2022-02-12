@@ -18,12 +18,11 @@ struct CardView: View {
         GeometryReader { geo in
             ZStack {
                 RoundedRectangle(cornerRadius: 25.0)
-                    .padding()
                     .frame(width: geo.size.width, height: geo.size.height)
                 
                 VStack {
                     HStack {
-                        ForEach(card.images[0...3], id: \.self) { image in
+                        ForEach(card.images[0...3].shuffled(), id: \.self) { image in
                             IconView(image: image)
                                 .onTapGesture {
                                     gameController.pick(value: image, player: player)
@@ -31,7 +30,7 @@ struct CardView: View {
                         }
                     }
                     HStack {
-                        ForEach(card.images[4...7], id: \.self) { image in
+                        ForEach(card.images[4...7].shuffled(), id: \.self) { image in
                             IconView(image: image)
                                 .onTapGesture {
                                     gameController.pick(value: image, player: player)
