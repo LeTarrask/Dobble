@@ -41,13 +41,15 @@ struct MainView: View {
         .sheet(isPresented: $showingSheet) {
             SettingsView()
         }
+        .navigationBarTitle("")
+        .navigationBarHidden(true)
     }
 }
 
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
         MainView()
-            .previewDevice("iPad Pro (12.9-inch) (5th generation)")
+            .previewDevice("iPhone 11 Pro")
             .environmentObject(GameController())
     }
 }

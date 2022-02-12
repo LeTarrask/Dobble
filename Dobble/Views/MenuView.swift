@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct MenuView: View {
+    @EnvironmentObject var gameController: GameController
+    
     var body: some View {
         ZStack {
             Color("kawaiiPink")
@@ -17,21 +19,29 @@ struct MenuView: View {
                 Image("logo")
                     .resizable()
                     .scaledToFit()
-                    .frame(width: 200)
-                Button(action: {
-                    
-                }, label: {
-                    VStack {
-                        Image("playButton")
+                    .frame(width: 300)
+                
+                HStack {
+                    Button(action: {
+                        // TO DO: blink button
+                        // TO DO: go to 1p game
+                    }) {
+                        Image("1pBlack")
                             .resizable()
                             .scaledToFit()
-                            .frame(width: 120)
-                        Image("playText")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 120)
+                            .frame(width: 150)
                     }
-                })
+                    
+                    Button(action: {
+                        // TO DO: blink button
+                        // TO DO: go to 2p game
+                    }) {
+                        Image("2pBlack")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 150)
+                    }
+                }
             }
         }
     }
@@ -40,5 +50,6 @@ struct MenuView: View {
 struct MenuView_Previews: PreviewProvider {
     static var previews: some View {
         MenuView()
+            .previewDevice("iPhone 8")
     }
 }
