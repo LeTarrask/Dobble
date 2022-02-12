@@ -13,24 +13,30 @@ struct MainView: View {
     @State private var showingSheet = false
     
     var body: some View {
-        VStack {
-            if !gameController.multiplayer {
-                SinglePlayerView()
-            } else {
-                MultiplayerView()
-            }
-            
+        VStack(spacing: 10) {
             HStack {
-                Banner()
-                Spacer()
                 Button(action: {
                     showingSheet.toggle()
                 }, label: {
                     Image(systemName: "slider.horizontal.3")
                         .font(.title)
                 })
+                
+                Spacer()
+                
+                Image("logo")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 100)
+            }.padding()
+            
+            if !gameController.multiplayer {
+                SinglePlayerView()
+            } else {
+                MultiplayerView()
             }
-            .padding(10)
+            
+            Banner()
         }
         .sheet(isPresented: $showingSheet) {
             SettingsView()

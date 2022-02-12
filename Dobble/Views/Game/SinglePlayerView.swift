@@ -9,22 +9,25 @@ import SwiftUI
 
 struct SinglePlayerView: View {
     @EnvironmentObject var gameController: GameController
-        
+    
     @State private var timeRemaining = 300
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     @State private var isActive = true
     
     var body: some View {
         ZStack {
-            VStack {
-                HStack {
-                    Text(NSLocalizedString("Score: ", comment: "") + String(gameController.score))
-                        .font(.largeTitle)
-                        .fontWeight(.black)
-                    Spacer()
-                    Text(NSLocalizedString("Time left: ", comment: "") + String(timeRemaining))
-                        .font(.title3)
-                        .fontWeight(.black)
+            VStack(alignment: .leading) {
+                VStack(alignment: .leading) {
+                    HStack {
+                        Text(NSLocalizedString("SCORE: ", comment: ""))
+                            .fontWeight(.black)
+                        Text(String(gameController.score))
+                    }
+                    HStack {
+                        Text(NSLocalizedString("TIME LEFT: ", comment: ""))
+                            .fontWeight(.black)
+                        Text(String(timeRemaining))
+                    }
                 }
                 .padding(.horizontal)
                 VStack {
@@ -49,7 +52,7 @@ struct SinglePlayerView: View {
                             timeRemaining = 580/gameController.difficulty
                             isActive = true
                         }.foregroundColor(.white)
-                        .font(.subheadline)
+                            .font(.subheadline)
                     }
                 }
             }

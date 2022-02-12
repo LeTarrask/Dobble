@@ -13,25 +13,23 @@ struct MultiplayerView: View {
     var body: some View {
         ZStack {
             VStack {
-                VStack {
+                VStack(alignment: .leading) {
                     HStack {
-                        Text(NSLocalizedString("Score One: ", comment: "") + String(describing: gameController.score))
-                            .font(.largeTitle)
+                        Text(NSLocalizedString("SCORE ONE: ", comment: ""))
                             .fontWeight(.black)
-                        Spacer()
-                    }.padding(.horizontal)
+                        Text(String(gameController.score))
+                    }.padding(.leading)
                     CardView(card: gameController.showingCards[0], player: 1)
                 }.rotationEffect(.degrees(180))
                 
                 Spacer()
                 
-                VStack {
+                VStack(alignment: .leading) {
                     HStack {
-                        Text(NSLocalizedString("Score Two: ", comment: "") + String(describing: gameController.scoreTwo))
-                            .font(.largeTitle)
+                        Text(NSLocalizedString("SCORE ONE: ", comment: ""))
                             .fontWeight(.black)
-                        Spacer()
-                    }.padding(.horizontal)
+                        Text(String(gameController.scoreTwo))
+                    }.padding(.leading).padding(.horizontal)
                     CardView(card: gameController.showingCards[1], player: 2)
                 }
             }
