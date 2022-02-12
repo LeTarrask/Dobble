@@ -37,7 +37,7 @@ struct MultiplayerView: View {
                 ZStack {
                     RoundedRectangle(cornerRadius: 25)
                         .frame(width: 300, height: 300)
-                        .foregroundColor(.red)
+                        .foregroundColor(Color("kawaiiDarkPink"))
                     VStack {
                         Image("gameover")
                             .resizable()
