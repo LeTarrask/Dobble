@@ -30,7 +30,6 @@ struct MenuView: View {
                                        isActive: $startGame)
                         
                         Button(action: {
-                            // TO DO: blink button
                             gameController.multiplayer = false
                             startGame.toggle()
                         }) {
@@ -38,10 +37,10 @@ struct MenuView: View {
                                 .resizable()
                                 .scaledToFit()
                                 .frame(width: 150)
+                                .opacity(startGame ? 0.5 : 1)
                         }
                         
                         Button(action: {
-                            // TO DO: blink button
                             gameController.multiplayer = true
                             startGame.toggle()
                         }) {
@@ -49,6 +48,7 @@ struct MenuView: View {
                                 .resizable()
                                 .scaledToFit()
                                 .frame(width: 150)
+                                .opacity(startGame ? 0.5 : 1)
                         }
                     }
                 }
