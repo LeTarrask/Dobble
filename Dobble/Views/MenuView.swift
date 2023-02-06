@@ -25,10 +25,6 @@ struct MenuView: View {
                         .frame(width: 300)
                     
                     HStack {
-                        NavigationLink("",
-                                       destination: MainView(),
-                                       isActive: $startGame)
-                        
                         Button(action: {
                             gameController.multiplayer = false
                             startGame.toggle()
@@ -50,9 +46,12 @@ struct MenuView: View {
                                 .frame(width: 150)
                                 .opacity(startGame ? 0.5 : 1)
                         }
+                        
                     }
                 }
             }
+            .navigationTitle("")
+            .navigationDestination(isPresented: $startGame) { MainView() }
         }
     }
 }
