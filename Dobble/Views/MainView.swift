@@ -13,36 +13,41 @@ struct MainView: View {
     @State private var showingSheet = false
     
     var body: some View {
-        VStack(spacing: 10) {
-            HStack {
-                Button(action: {
-                    showingSheet.toggle()
-                }, label: {
-                    Image(systemName: "slider.horizontal.3")
-                        .font(.title)
-                })
-                
-                Spacer()
-                
-                Image("logo")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 100)
-            }.padding()
+        ZStack {
+            Color("kawaiiPink")
+                .edgesIgnoringSafeArea(.all)
             
-            if !gameController.multiplayer {
-                SinglePlayerView()
-            } else {
-                MultiplayerView()
+            VStack(spacing: 10) {
+                HStack {
+                    Button(action: {
+                        showingSheet.toggle()
+                    }, label: {
+                        Image(systemName: "slider.horizontal.3")
+                            .font(.title)
+                    })
+                    
+                    Spacer()
+                    
+                    Image("logo")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 100)
+                }.padding()
+                
+                if !gameController.multiplayer {
+                    SinglePlayerView()
+                } else {
+                    MultiplayerView()
+                }
+                
+    //            Banner()
             }
-            
-            Banner()
-        }
-        .sheet(isPresented: $showingSheet) {
-            SettingsView()
-        }
-        .navigationBarTitle("")
+            .sheet(isPresented: $showingSheet) {
+                SettingsView()
+            }
+            .navigationBarTitle("")
         .navigationBarHidden(true)
+        }
     }
 }
 

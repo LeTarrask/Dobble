@@ -19,7 +19,7 @@ struct CardView: View {
             ZStack {
                 RoundedRectangle(cornerRadius: 25.0)
                     .frame(width: geo.size.width, height: geo.size.height)
-                    .foregroundColor(Color("kawaiiGray")).opacity(30)
+                    .foregroundColor(Color("kawaiiGray")).opacity(0.65)
                 
                 VStack {
                     HStack {

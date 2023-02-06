@@ -3,16 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		401CDA06D1066D3143A99970 /* Pods_Dobble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB952DC26F0694C217EDAC51 /* Pods_Dobble.framework */; };
 		5F382321408CFCC2C8EB61B9 /* Pods_Dobble_DobbleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB3A5B0BB2E77B6E0519168D /* Pods_Dobble_DobbleUITests.framework */; };
-		7913CAD425FA4DBA00E371FA /* BannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7913CAD025FA4DBA00E371FA /* BannerView.swift */; };
-		7913CAD525FA4DBA00E371FA /* AdMob InterstitialVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7913CAD125FA4DBA00E371FA /* AdMob InterstitialVC.swift */; };
-		7913CAD625FA4DBA00E371FA /* InterstitialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7913CAD225FA4DBA00E371FA /* InterstitialView.swift */; };
-		7913CAD725FA4DBA00E371FA /* AdMob BannerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7913CAD325FA4DBA00E371FA /* AdMob BannerVC.swift */; };
 		799675AA27B8092A0018FA0A /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799675A927B8092A0018FA0A /* LoadingView.swift */; };
 		799675AC27B80A080018FA0A /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799675AB27B80A080018FA0A /* MenuView.swift */; };
 		79A97ACD27B164BD000AB23C /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A97ACC27B164BD000AB23C /* GameView.swift */; };
@@ -59,10 +55,6 @@
 /* Begin PBXFileReference section */
 		5E21B5DF22EB685BE58B7433 /* Pods_DobbleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DobbleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E025EC34365C9776F2920CF /* Pods-DobbleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DobbleTests.release.xcconfig"; path = "Target Support Files/Pods-DobbleTests/Pods-DobbleTests.release.xcconfig"; sourceTree = "<group>"; };
-		7913CAD025FA4DBA00E371FA /* BannerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannerView.swift; sourceTree = "<group>"; };
-		7913CAD125FA4DBA00E371FA /* AdMob InterstitialVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AdMob InterstitialVC.swift"; sourceTree = "<group>"; };
-		7913CAD225FA4DBA00E371FA /* InterstitialView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterstitialView.swift; sourceTree = "<group>"; };
-		7913CAD325FA4DBA00E371FA /* AdMob BannerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AdMob BannerVC.swift"; sourceTree = "<group>"; };
 		799675A927B8092A0018FA0A /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		799675AB27B80A080018FA0A /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		79A97ACC27B164BD000AB23C /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
@@ -139,17 +131,6 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		7913CACF25FA4DBA00E371FA /* AdMob */ = {
-			isa = PBXGroup;
-			children = (
-				7913CAD025FA4DBA00E371FA /* BannerView.swift */,
-				7913CAD125FA4DBA00E371FA /* AdMob InterstitialVC.swift */,
-				7913CAD225FA4DBA00E371FA /* InterstitialView.swift */,
-				7913CAD325FA4DBA00E371FA /* AdMob BannerVC.swift */,
-			);
-			path = AdMob;
-			sourceTree = "<group>";
-		};
 		799675A827B808A50018FA0A /* Game */ = {
 			isa = PBXGroup;
 			children = (
@@ -188,7 +169,6 @@
 			children = (
 				79FA5B6025D166380057FC51 /* DobbleApp.swift */,
 				79FA5B6925D1663E0057FC51 /* Info.plist */,
-				7913CACF25FA4DBA00E371FA /* AdMob */,
 				79FA5B8E25D1664B0057FC51 /* Model */,
 				79FA5B9025D166610057FC51 /* ViewModels */,
 				79FA5B8F25D166520057FC51 /* Views */,
@@ -286,7 +266,6 @@
 				79FA5B5925D166380057FC51 /* Sources */,
 				79FA5B5A25D166380057FC51 /* Frameworks */,
 				79FA5B5B25D166380057FC51 /* Resources */,
-				7869E0079510816CAC8C647C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -324,7 +303,6 @@
 				79FA5B7525D1663E0057FC51 /* Sources */,
 				79FA5B7625D1663E0057FC51 /* Frameworks */,
 				79FA5B7725D1663E0057FC51 /* Resources */,
-				960FFCD499F96ED9C1DF131C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -430,23 +408,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		7869E0079510816CAC8C647C /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Dobble/Pods-Dobble-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Dobble/Pods-Dobble-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Dobble/Pods-Dobble-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		8A79D37A50DA43CBB2822F29 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -467,23 +428,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		960FFCD499F96ED9C1DF131C /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Dobble-DobbleUITests/Pods-Dobble-DobbleUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Dobble-DobbleUITests/Pods-Dobble-DobbleUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Dobble-DobbleUITests/Pods-Dobble-DobbleUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FB324D4DA75888B10D4AA666 /* [CP] Check Pods Manifest.lock */ = {
@@ -522,17 +466,13 @@
 				799675AA27B8092A0018FA0A /* LoadingView.swift in Sources */,
 				79A97ACD27B164BD000AB23C /* GameView.swift in Sources */,
 				79BC220C25D5648D0088C488 /* IconView.swift in Sources */,
-				7913CAD625FA4DBA00E371FA /* InterstitialView.swift in Sources */,
-				7913CAD525FA4DBA00E371FA /* AdMob InterstitialVC.swift in Sources */,
 				79FA5B6125D166380057FC51 /* DobbleApp.swift in Sources */,
 				79A97AD127B18819000AB23C /* MainView.swift in Sources */,
 				79FA5BB725D1923C0057FC51 /* GameController.swift in Sources */,
 				79BC221E25D578290088C488 /* SettingsView.swift in Sources */,
 				799675AC27B80A080018FA0A /* MenuView.swift in Sources */,
-				7913CAD425FA4DBA00E371FA /* BannerView.swift in Sources */,
 				79BC220725D564780088C488 /* CardView.swift in Sources */,
 				79FA5B9E25D1729A0057FC51 /* Card.swift in Sources */,
-				7913CAD725FA4DBA00E371FA /* AdMob BannerVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -634,7 +574,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -690,7 +630,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -712,12 +652,13 @@
 				DEVELOPMENT_TEAM = L2BC5TCSR5;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Dobble/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				INFOPLIST_KEY_CFBundleDisplayName = Kawaiibble;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.garageminfinita.Kawaibble;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tarrask.Kawaibble;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
@@ -737,12 +678,13 @@
 				DEVELOPMENT_TEAM = L2BC5TCSR5;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Dobble/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				INFOPLIST_KEY_CFBundleDisplayName = Kawaiibble;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.garageminfinita.Kawaibble;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tarrask.Kawaibble;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
