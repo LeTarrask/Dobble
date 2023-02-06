@@ -5,3 +5,23 @@
   Created by Alex Luna on 09/03/2021.
   
 */
+
+// SinglePlayerView
+"Game Over" = "Fime de jogo";
+"Play again" = "Jogar outra vez";
+"You scored " = "Você marcou " ;
+"Score: " = "Placar: ";
+"SCORE: " = "PLACAR: ";
+"SCORE: " = "PLACAR: ";
+"SCORE ONE: " = "PLACAR UM: ";
+"SCORE TWO: " = "PLACAR DOIS: ";
+"Time left: " = "Tempo: ";
+"TIME LEFT: " = "TEMPO: ";
+
+// MultiplayerView
+"Player 1 wins" = "Jogador 1 vence";
+"Player 2 wins" = "Jogador 2 vence";
+
+// Settings View
+"Multiplayer Mode" = "Modo multijogador";
+"Difficulty Level: " = "Nível de dificuldade: ";

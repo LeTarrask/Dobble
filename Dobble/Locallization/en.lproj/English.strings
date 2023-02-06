@@ -11,7 +11,12 @@
 "Play again" = "Play again";
 "You scored " = "You scored " ;
 "Score: " = "Score: ";
+"SCORE: " = "SCORE: ";
+"SCORE: " = "SCORE: ";
+"SCORE ONE: " = "SCORE ONE: ";
+"SCORE TWO: " = "SCORE TWO: ";
 "Time left: " = "Time left: ";
+"TIME LEFT: " = "TIME LEFT: ";
 
 // MultiplayerView
 "Player 1 wins" = "Player 1 wins";

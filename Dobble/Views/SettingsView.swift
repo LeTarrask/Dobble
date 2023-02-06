@@ -15,30 +15,39 @@ struct SettingsView: View {
     @State private var difficulty: Int = 1
     
     var body: some View {
-        VStack {
-            Form {
-                Section("Game Settings") {
-                    Toggle(isOn: $gameController.multiplayer, label: {
-                        Text(NSLocalizedString("Multiplayer Mode", comment: ""))
-                    })
-                    Stepper(value: $gameController.difficulty, in: 1...5) {
-                        Text(NSLocalizedString("Difficulty Level: ", comment: "") + String(gameController.difficulty))
+        ZStack {
+            Color("kawaiiPink")
+                .edgesIgnoringSafeArea(.all)
+            
+            VStack {
+                Form {
+                    Section("Game Settings") {
+                        Toggle(isOn: $gameController.multiplayer, label: {
+                            Text(NSLocalizedString("Multiplayer Mode", comment: ""))
+                        })
+                        Stepper(value: $gameController.difficulty, in: 1...5) {
+                            Text(NSLocalizedString("Difficulty Level: ", comment: "") + String(gameController.difficulty))
+                        }
                     }
+                    
                 }
-            }
-            
-//            Banner()
-            
-            HStack {
-                Button("Go Back") {
-                    dismiss()
+                .scrollContentBackground(.hidden)
+                .foregroundColor(.pink)
+                
+                
+                //            Banner()
+                
+                HStack {
+                    Button("Go Back") {
+                        dismiss()
+                    }
+                    .font(.title)
+                    .padding()
+                    .buttonStyle(.borderedProminent)
                 }
-                .font(.title)
-                .padding()
-                .buttonStyle(.borderedProminent)
+                
+                Spacer()
             }
-            
-            Spacer()
         }
     }
 }

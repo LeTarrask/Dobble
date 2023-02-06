@@ -26,7 +26,7 @@ struct MultiplayerView: View {
                 
                 VStack(alignment: .leading) {
                     HStack {
-                        Text(NSLocalizedString("SCORE ONE: ", comment: ""))
+                        Text(NSLocalizedString("SCORE TWO: ", comment: ""))
                             .fontWeight(.black)
                         Text(String(gameController.scoreTwo))
                     }.padding(.leading).padding(.horizontal)
