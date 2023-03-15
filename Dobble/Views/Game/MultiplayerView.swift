@@ -86,6 +86,7 @@ struct MultiplayerView: View {
     
     func startGame() {
         gameController.gameOver = false
+        gameController.multiplayer = true
         timeRemaining = 580/gameController.difficulty
         isActive = true
     }
