@@ -95,7 +95,7 @@ struct SinglePlayerView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         let game = GameController()
-        game.gameOver = true
+//        game.gameOver = true
         return SinglePlayerView()
             .environmentObject(game)
     }
