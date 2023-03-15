@@ -61,8 +61,10 @@ struct MultiplayerView: View {
 
 struct MultiplayerView_Previews: PreviewProvider {
     static var previews: some View {
-        MultiplayerView()
+        let game = GameController()
+        game.gameOver = true
+        return MultiplayerView()
             .previewDevice("iPad Pro (12.9-inch) (5th generation)")
-            .environmentObject(GameController())
+            .environmentObject(game)
     }
 }
