@@ -20,6 +20,7 @@ struct MultiplayerView: View {
                         Text(String(gameController.score))
                     }.padding(.leading)
                     CardView(card: gameController.showingCards[0], player: 1)
+                        .frame(width: 430, height: 270)
                 }.rotationEffect(.degrees(180))
                 
                 Spacer()
@@ -31,6 +32,7 @@ struct MultiplayerView: View {
                         Text(String(gameController.scoreTwo))
                     }.padding(.leading).padding(.horizontal)
                     CardView(card: gameController.showingCards[1], player: 2)
+                        .frame(width: 430, height: 270)
                 }
             }
             if gameController.gameOver {

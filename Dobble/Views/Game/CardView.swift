@@ -38,7 +38,7 @@ struct CardView: View {
                                 }
                         }
                     }
-                }.padding()
+                }.padding(20)
             }
         }.padding(20)
     }
@@ -49,6 +49,6 @@ struct Previews_CardView_Previews: PreviewProvider {
     static var previews: some View {
         let controller = GameController()
         let card = controller.showingCards[0]
-        return CardView(card: card, player: 1)
+        return CardView(card: card, player: 1).frame(width: 400, height: 300)
     }
 }
