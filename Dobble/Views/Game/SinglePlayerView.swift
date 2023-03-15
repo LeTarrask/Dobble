@@ -33,6 +33,7 @@ struct SinglePlayerView: View {
                 VStack {
                     ForEach(gameController.showingCards, id: \.self) { card in
                         CardView(card: card, player: 1)
+                            .frame(width: 430, height: 270)
                     }
                 }
             }
