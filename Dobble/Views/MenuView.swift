@@ -48,7 +48,7 @@ struct MenuView: View {
                         }
                         
                     }
-                }
+                }.padding()
             }
             .navigationTitle("")
             .navigationDestination(isPresented: $startGame) { MainView() }
