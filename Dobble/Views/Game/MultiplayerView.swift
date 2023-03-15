@@ -19,10 +19,15 @@ struct MultiplayerView: View {
             VStack {
                 VStack(alignment: .leading) {
                     HStack {
+                        Text(NSLocalizedString("TIME LEFT: ", comment: ""))
+                            .fontWeight(.black)
+                        Text(String(timeRemaining))
+                    }.padding(.leading).padding(.horizontal)
+                    HStack {
                         Text(NSLocalizedString("SCORE ONE: ", comment: ""))
                             .fontWeight(.black)
                         Text(String(gameController.score))
-                    }.padding(.leading)
+                    }.padding(.leading).padding(.horizontal)
                     CardView(card: gameController.showingCards[0], player: 1)
                         .frame(width: 430, height: 270)
                 }.rotationEffect(.degrees(180))
@@ -30,6 +35,11 @@ struct MultiplayerView: View {
                 Spacer()
                 
                 VStack(alignment: .leading) {
+                    HStack {
+                        Text(NSLocalizedString("TIME LEFT: ", comment: ""))
+                            .fontWeight(.black)
+                        Text(String(timeRemaining))
+                    }.padding(.leading).padding(.horizontal)
                     HStack {
                         Text(NSLocalizedString("SCORE TWO: ", comment: ""))
                             .fontWeight(.black)
@@ -77,6 +87,9 @@ struct MultiplayerView: View {
         .onReceive(NotificationCenter.default.publisher(for: UIApplication.willEnterForegroundNotification)) { _ in
             self.isActive = true
         }
+        .onAppear {
+            startGame()
+        }
     }
     
     func gameOver() {
@@ -95,7 +108,7 @@ struct MultiplayerView: View {
 struct MultiplayerView_Previews: PreviewProvider {
     static var previews: some View {
         let game = GameController()
-        game.gameOver = true
+//        game.gameOver = true
         return MultiplayerView()
             .previewDevice("iPad Pro (12.9-inch) (5th generation)")
             .environmentObject(game)
