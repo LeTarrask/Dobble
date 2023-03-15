@@ -10,9 +10,9 @@ import SwiftUI
 struct SinglePlayerView: View {
     @EnvironmentObject var gameController: GameController
     
-    @State private var timeRemaining = 300
+    @State private var timeRemaining = 0
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
-    @State private var isActive = true
+    @State private var isActive = false
     
     var body: some View {
         ZStack {
@@ -49,9 +49,7 @@ struct SinglePlayerView: View {
                             .frame(width: 300)
                         Text(NSLocalizedString("You scored ", comment: "") + String(gameController.score * timeRemaining))
                         Button(NSLocalizedString("Play again", comment: "")) {
-                            gameController.gameOver = false
-                            timeRemaining = 580/gameController.difficulty
-                            isActive = true
+                            startGame()
                         }.foregroundColor(.white)
                             .font(.subheadline)
                     }
@@ -64,8 +62,7 @@ struct SinglePlayerView: View {
                 self.timeRemaining -= 1
             }
             if self.timeRemaining == 0 {
-                gameController.gameOver = true
-                isActive = false
+                gameOver()
             }
         }
         .onReceive(NotificationCenter.default.publisher(for: UIApplication.willResignActiveNotification)) { _ in
@@ -74,6 +71,24 @@ struct SinglePlayerView: View {
         .onReceive(NotificationCenter.default.publisher(for: UIApplication.willEnterForegroundNotification)) { _ in
             self.isActive = true
         }
+        .onAppear {
+            if gameController.gameOver {
+                gameOver()
+            } else {
+                startGame()
+            }
+        }
+    }
+    
+    func gameOver() {
+        gameController.gameOver = true
+        isActive = false
+    }
+    
+    func startGame() {
+        gameController.gameOver = false
+        timeRemaining = 580/gameController.difficulty
+        isActive = true
     }
 }
 

@@ -9,6 +9,10 @@ import SwiftUI
 
 struct MultiplayerView: View {
     @EnvironmentObject var gameController: GameController
+    
+    @State private var timeRemaining = 0
+    let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+    @State private var isActive = false
         
     var body: some View {
         ZStack {
@@ -51,13 +55,39 @@ struct MultiplayerView: View {
                             Text(NSLocalizedString("Player 2 wins", comment: ""))
                         }
                         Button("Play again") {
-                            gameController.gameOver.toggle()
+                            startGame()
                         }.foregroundColor(.white)
                         .font(.subheadline)
                     }
                 }
             }
         }
+        .onReceive(timer) { time in
+            guard self.isActive else { return }
+            if self.timeRemaining > 0 {
+                self.timeRemaining -= 1
+            }
+            if self.timeRemaining == 0 {
+                gameOver()
+            }
+        }
+        .onReceive(NotificationCenter.default.publisher(for: UIApplication.willResignActiveNotification)) { _ in
+            self.isActive = false
+        }
+        .onReceive(NotificationCenter.default.publisher(for: UIApplication.willEnterForegroundNotification)) { _ in
+            self.isActive = true
+        }
+    }
+    
+    func gameOver() {
+        gameController.gameOver = true
+        isActive = false
+    }
+    
+    func startGame() {
+        gameController.gameOver = false
+        timeRemaining = 580/gameController.difficulty
+        isActive = true
     }
 }
 
