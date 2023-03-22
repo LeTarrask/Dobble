@@ -13,48 +13,42 @@ struct MainView: View {
     @State private var showingSheet = false
     
     var body: some View {
-        ZStack {
-            Color("kawaiiPink")
-                .edgesIgnoringSafeArea(.all)
+        VStack(spacing: 10) {
+            HStack {
+                Button(action: {
+                    showingSheet.toggle()
+                }, label: {
+                    Image(systemName: "slider.horizontal.3")
+                        .font(.title)
+                })
+                
+                Spacer()
+                
+                Image("logo")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 100)
+            }.padding(.horizontal, 40)
             
-            VStack(spacing: 10) {
-                HStack {
-                    Button(action: {
-                        showingSheet.toggle()
-                    }, label: {
-                        Image(systemName: "slider.horizontal.3")
-                            .font(.title)
-                    })
-                    
-                    Spacer()
-                    
-                    Image("logo")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 100)
-                }.padding()
-                
-                if !gameController.multiplayer {
-                    SinglePlayerView()
-                } else {
-                    MultiplayerView()
-                }
-                
-    //            Banner()
+            if !gameController.multiplayer {
+                SinglePlayerView()
+            } else {
+                MultiplayerView()
             }
-            .sheet(isPresented: $showingSheet) {
-                SettingsView()
-            }
-            .navigationBarTitle("")
-        .navigationBarHidden(true)
         }
+        .sheet(isPresented: $showingSheet) {
+            SettingsView()
+            
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(Color("kawaiiPink"))
     }
 }
 
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
         MainView()
-            .previewDevice("iPhone 11 Pro")
+            .previewDevice("iPhone 12")
             .environmentObject(GameController())
     }
 }

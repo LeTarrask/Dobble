@@ -29,7 +29,7 @@ struct SinglePlayerView: View {
                         Text(String(timeRemaining))
                     }
                 }
-                .padding(.horizontal)
+                .padding(.horizontal, 45)
                 VStack {
                     ForEach(gameController.showingCards, id: \.self) { card in
                         CardView(card: card, player: 1)

@@ -40,7 +40,7 @@ struct CardView: View {
                     }
                 }.padding(20)
             }
-        }.padding(20)
+        }.padding(40)
     }
 }
 

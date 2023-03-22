@@ -218,9 +218,9 @@
 		79FA5B8F25D166520057FC51 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				79A97AD027B18819000AB23C /* MainView.swift */,
 				799675A927B8092A0018FA0A /* LoadingView.swift */,
 				799675AB27B80A080018FA0A /* MenuView.swift */,
-				79A97AD027B18819000AB23C /* MainView.swift */,
 				799675A827B808A50018FA0A /* Game */,
 				79BC221D25D578290088C488 /* SettingsView.swift */,
 				79A97ACC27B164BD000AB23C /* GameView.swift */,
