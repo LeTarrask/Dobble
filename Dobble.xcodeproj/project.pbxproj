@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		401CDA06D1066D3143A99970 /* Pods_Dobble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB952DC26F0694C217EDAC51 /* Pods_Dobble.framework */; };
 		5F382321408CFCC2C8EB61B9 /* Pods_Dobble_DobbleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB3A5B0BB2E77B6E0519168D /* Pods_Dobble_DobbleUITests.framework */; };
+		7973741929CB669D00620818 /* CardGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7973741829CB669D00620818 /* CardGenerator.swift */; };
+		7973741A29CB669D00620818 /* CardGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7973741829CB669D00620818 /* CardGenerator.swift */; };
 		799675AA27B8092A0018FA0A /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799675A927B8092A0018FA0A /* LoadingView.swift */; };
 		799675AC27B80A080018FA0A /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799675AB27B80A080018FA0A /* MenuView.swift */; };
 		79A97ACD27B164BD000AB23C /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A97ACC27B164BD000AB23C /* GameView.swift */; };
@@ -55,6 +57,7 @@
 /* Begin PBXFileReference section */
 		5E21B5DF22EB685BE58B7433 /* Pods_DobbleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DobbleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E025EC34365C9776F2920CF /* Pods-DobbleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DobbleTests.release.xcconfig"; path = "Target Support Files/Pods-DobbleTests/Pods-DobbleTests.release.xcconfig"; sourceTree = "<group>"; };
+		7973741829CB669D00620818 /* CardGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CardGenerator.swift; path = Dobble/ViewModels/CardGenerator.swift; sourceTree = SOURCE_ROOT; };
 		799675A927B8092A0018FA0A /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		799675AB27B80A080018FA0A /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		79A97ACC27B164BD000AB23C /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
@@ -208,6 +211,7 @@
 		79FA5B8E25D1664B0057FC51 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				7973741829CB669D00620818 /* CardGenerator.swift */,
 				79FA5B9D25D1729A0057FC51 /* Card.swift */,
 				79FA5BB125D190B30057FC51 /* Decks.swift */,
 				79FA5BA925D17DC70057FC51 /* extension+Array+similarElements.swift */,
@@ -468,6 +472,7 @@
 				79BC220C25D5648D0088C488 /* IconView.swift in Sources */,
 				79FA5B6125D166380057FC51 /* DobbleApp.swift in Sources */,
 				79A97AD127B18819000AB23C /* MainView.swift in Sources */,
+				7973741929CB669D00620818 /* CardGenerator.swift in Sources */,
 				79FA5BB725D1923C0057FC51 /* GameController.swift in Sources */,
 				79BC221E25D578290088C488 /* SettingsView.swift in Sources */,
 				799675AC27B80A080018FA0A /* MenuView.swift in Sources */,
@@ -484,6 +489,7 @@
 				79BC222E25D5F27D0088C488 /* Decks.swift in Sources */,
 				79FA5BB825D1923C0057FC51 /* GameController.swift in Sources */,
 				79FA5BA525D17A4E0057FC51 /* Card.swift in Sources */,
+				7973741A29CB669D00620818 /* CardGenerator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -713,7 +719,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L2BC5TCSR5;
 				INFOPLIST_FILE = DobbleTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -736,7 +742,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L2BC5TCSR5;
 				INFOPLIST_FILE = DobbleTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
